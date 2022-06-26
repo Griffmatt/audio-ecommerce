@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Manrope Bold";
+  font-weight: 700;
+  src: url("./Fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Manrope Regular";
+  src: url("./Fonts/Manrope-Regular.ttf");
+}
+/*# sourceMappingURL=variables.css.map */

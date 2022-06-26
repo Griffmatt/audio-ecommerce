@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Manrope Bold";
+  font-weight: 700;
+  src: url("./Fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Manrope Regular";
+  src: url("./Fonts/Manrope-Regular.ttf");
+}
+
+body {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Manrope Regular";
+  font-weight: 500;
+  margin: 0;
+  background-color: bisque;
+}
+
+.appWrapper {
+  max-width: 1600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  font-family: "Manrope Bold";
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+  font-family: "Manrope Bold";
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+  font-family: "Manrope Bold";
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  font-family: "Manrope Bold";
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+  font-family: "Manrope Bold";
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+  font-family: "Manrope Bold";
+}
+
+.overLine {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  font-family: "Manrope Regular";
+}
+
+.subTitle {
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-family: "Manrope Bold";
+}
+/*# sourceMappingURL=App.css.map */
