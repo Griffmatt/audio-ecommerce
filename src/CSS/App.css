@@ -10,12 +10,8 @@
 }
 
 body {
-  font-size: 15px;
-  line-height: 25px;
-  font-family: "Manrope Regular";
-  font-weight: 500;
+  background-color: #FAFAFA;
   margin: 0;
-  background-color: #F1F1F1;
 }
 
 .appWrapper {

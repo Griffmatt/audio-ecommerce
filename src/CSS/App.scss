@@ -1,12 +1,8 @@
 @import './variables.scss';
 
 body{
-    font-size: 15px;
-    line-height: 25px;
-    font-family: "Manrope Regular";
-    font-weight: 500;
+    background-color: $MainWhite;
     margin: 0;
-    background-color: $MainGrey;
 }
 
 .appWrapper{

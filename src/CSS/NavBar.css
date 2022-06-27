@@ -76,14 +76,6 @@
 }
 
 .navBar .componentWrapper ul li a:hover {
-  opacity: .75;
-}
-
-.navBar .componentWrapper ul li .active {
   color: #D87D4A;
-}
-
-.navBar .componentWrapper ul li .active:hover {
-  opacity: 1;
 }
 /*# sourceMappingURL=NavBar.css.map */
