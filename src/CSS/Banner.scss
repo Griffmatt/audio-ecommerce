@@ -1,0 +1,39 @@
+@import './variables.scss';
+
+.banner{
+    background-color: $MainBlack;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .componentWrapper{
+        height: 717px;
+        width: 100%;
+        background-image: url("/public/assets/home/desktop/image-hero.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        .overLine{
+            color: rgba($SecWhite, .5)
+        }
+        h1{
+            color: $SecWhite;
+        }
+        .bannerContent{
+            position: absolute;
+            top: 24.5vh;
+            left: 10%;
+            max-width: 400px;
+            max-height: 350px;
+            height: 38vh;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            p{
+                color: rgba($SecWhite, .75);
+                max-width: 350px;
+            }
+        }
+    }
+}
+

@@ -6,18 +6,34 @@ body{
     font-family: "Manrope Regular";
     font-weight: 500;
     margin: 0;
-    background-color: bisque;
+    background-color: $MainGrey;
 }
 
 .appWrapper{
-    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
+}
+
+.componentWrapper{
+    width: 80%;
+    max-width: 1600px;
+}
+
+p{
+    font-size: 15px;
+    line-height: 25px;
+    font-family: "Manrope Regular";
+    font-weight: 500;
+    margin: 0;
 }
 
 h1{
     font-size: 56px;
     line-height: 58px;
     letter-spacing: 2px;
+    margin: 0;
 
     font-family: "Manrope Bold";
 }
@@ -75,5 +91,17 @@ h6{
     letter-spacing: 1px;
 
     font-family: "Manrope Bold";
+}
+
+.buttonOne{
+    width: 168px;
+    height: 48px;
+    background-color: $MainOrange;
+    color: $SecWhite;
+    border: none;
+}
+
+.buttonOne:hover{
+    background-color: $SecOrange;
 }
 

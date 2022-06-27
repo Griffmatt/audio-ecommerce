@@ -1,38 +1,56 @@
 @import './variables.scss';
 
 .navBar{
-    background-color: $SecBlack;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    position: sticky;
-}
-.navWrapper{
-    width: 77.7vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    border-bottom: 1px solid #979797;
-    img{
-        height: 25px;
-        width: 143px;
-        padding-inline-start: 0;
-    }
-    ul{
-        padding: 0;
-        list-style-type: none;
+    z-index: 100;
+    .componentWrapper{
         display: flex;
-        justify-content: center;
-        gap: 34px;
-        margin: 0;
-        li{
-            color: $SecWhite;
-            font-family: "Manrope Bold";
-            font-size: 13px;
-            line-height: 25px;
-            letter-spacing: 2px;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #979797;
+        .navLogo{
+            height: auto;
+            width: 143px;
             cursor: pointer;
+        }
+        .navCheckout{
+            height: 20px;
+            width: auto;
+            cursor: pointer;
+        }
+        ul{
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 34px;
+            margin: 0;
+            li{
+                cursor: pointer;
+                a{
+                    text-decoration: none;
+                    color: $SecWhite;
+                    font-family: "Manrope Bold";
+                    font-size: 13px;
+                    line-height: 25px;
+                    letter-spacing: 2px;
+                }
+                a:hover{
+                    opacity: .75;
+                }
+                .active{
+                    color: $MainOrange;
+                }
+                .active:hover{
+                    opacity: 1;
+                }
+            }
         }
     }
 }
