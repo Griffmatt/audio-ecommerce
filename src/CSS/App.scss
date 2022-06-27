@@ -5,16 +5,11 @@ body{
     margin: 0;
 }
 
-.appWrapper{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-}
-
 .componentWrapper{
-    width: 80%;
+   padding-left: 10%;
+   padding-right: 10%;
     max-width: 1600px;
+    width: 100%;
 }
 
 p{

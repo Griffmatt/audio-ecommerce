@@ -19,31 +19,12 @@
           justify-content: center;
 }
 
-.banner .bannerBackground {
-  max-width: 1600px;
-  width: 100%;
+.banner .componentWrapper {
+  height: 80vh;
+  max-height: 1050px;
   background-image: url("/public/assets/home/desktop/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.banner .componentWrapper {
-  height: 80vh;
-  max-height: 800px;
-  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
