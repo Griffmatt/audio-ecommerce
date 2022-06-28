@@ -3,6 +3,7 @@ import React from 'react'
 import Banner from '../Banner';
 import ShopProducts from '../ShopProducts';
 import ProductCardOne from '../ProductCardOne';
+import ProductCardTwo from '../ProductCardTwo';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
           <ShopProducts/>
           <div className="productCards">
             <ProductCardOne/>
+            <ProductCardTwo/>
           </div>
         </div>
       </section>
