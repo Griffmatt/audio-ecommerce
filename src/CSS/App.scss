@@ -5,11 +5,9 @@ body{
     margin: 0;
 }
 
-.componentWrapper{
-   padding-left: 10%;
-   padding-right: 10%;
-    max-width: 1600px;
-    width: 100%;
+a{
+    text-decoration: none;
+    color: $SecBlack;
 }
 
 p{
@@ -64,7 +62,7 @@ h6{
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.3px;
-
+    margin: 0;
     font-family: "Manrope Bold";
 }
 
@@ -94,5 +92,58 @@ h6{
 
 .buttonOne:hover{
     background-color: $SecOrange;
+}
+
+.buttonTwo:hover{
+    color: $MainOrange;
+}
+
+.buttonThreeA{
+    border: none;
+    background-color: $SecBlack;
+    color: $SecWhite;
+    width: 160px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.buttonThreeA:hover{
+    background-color: $SecGrey;
+}
+
+
+.homePageHeader{
+    background-color: $MainBlack;
+    display: flex;
+    justify-content: center;
+}
+
+.pageHeader{
+    background-color: $SecBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageContent{
+    display: flex;
+    justify-content: center;
+}
+
+.pageWrapper{
+    max-width: 1600px;
+    width: 77%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.pageFooter{
+    background-color: $SecBlack;
+    height: 200px;
+    width: 100%;
 }
 

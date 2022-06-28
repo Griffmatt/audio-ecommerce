@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+.productsCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productCardOne{
+    background-color: $MainOrange;
+    height: 560px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    .patternCircles{
+        height: 944px;
+        width: auto;
+        position: absolute;
+        left: -260px;
+    }
+    .productInfo{
+        width: 349px;
+        height: 303px;
+        color: $SecWhite;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-self: center;
+        z-index: 2;
+        p{
+            width: 349px;
+        }
+
+    }
+    .imageContainer{
+        position: relative;
+        width: 450px;
+        .productImage{
+            height: 460px;
+            width: auto;
+            position: absolute;
+            bottom: -10px; 
+            z-index: 2;
+        }
+    }
+}

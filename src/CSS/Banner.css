@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Manrope Bold";
-  font-weight: 700;
+  font-weight: 800;
   src: url("./Fonts/Manrope-Regular.ttf");
 }
 
@@ -10,18 +10,10 @@
 }
 
 .banner {
-  background-color: #191919;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.banner .componentWrapper {
   height: 80vh;
-  max-height: 1050px;
+  max-height: 900px;
+  width: 100%;
+  max-width: 1600px;
   background-image: url("/public/assets/home/desktop/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,18 +25,19 @@
           align-items: center;
 }
 
-.banner .componentWrapper .overLine {
+.banner .overLine {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.banner .componentWrapper h1 {
+.banner h1 {
   color: #FFFFFF;
 }
 
-.banner .componentWrapper .bannerContent {
+.banner .bannerContent {
   max-width: 400px;
   max-height: 350px;
   height: 38vh;
+  padding-left: 11.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +50,7 @@
           flex-direction: column;
 }
 
-.banner .componentWrapper .bannerContent p {
+.banner .bannerContent p {
   color: rgba(255, 255, 255, 0.75);
   max-width: 350px;
 }

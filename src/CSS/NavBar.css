@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Manrope Bold";
-  font-weight: 700;
+  font-weight: 800;
   src: url("./Fonts/Manrope-Regular.ttf");
 }
 
@@ -10,7 +10,7 @@
 }
 
 .navBar {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   display: -webkit-box;
@@ -35,7 +35,7 @@
           align-items: center;
   padding-top: 35px;
   padding-bottom: 35px;
-  width: 80%;
+  width: 77%;
   border-bottom: 1px solid #979797;
 }
 

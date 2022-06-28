@@ -1,12 +1,27 @@
 import React from 'react'
 
 import Banner from '../Banner';
+import ShopProducts from '../ShopProducts';
+import ProductCardOne from '../ProductCardOne';
 
 function Home() {
   return (
-    <div className="homePage">
+    <>
+      <section className="homePageHeader">
         <Banner/>
-    </div>
+      </section>
+      <section className="pageContent">
+        <div className="pageWrapper">
+          <ShopProducts/>
+          <div className="productCards">
+            <ProductCardOne/>
+          </div>
+        </div>
+      </section>
+      <section className="pageFooter">
+
+      </section>
+    </>
   )
 }
 

@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Manrope Bold";
+  font-weight: 800;
+  src: url("./Fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Manrope Regular";
+  src: url("./Fonts/Manrope-Regular.ttf");
+}
+
+.productsCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productCardOne {
+  background-color: #D87D4A;
+  height: 560px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.productCardOne .patternCircles {
+  height: 944px;
+  width: auto;
+  position: absolute;
+  left: -260px;
+}
+
+.productCardOne .productInfo {
+  width: 349px;
+  height: 303px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  z-index: 2;
+}
+
+.productCardOne .productInfo p {
+  width: 349px;
+}
+
+.productCardOne .imageContainer {
+  position: relative;
+  width: 450px;
+}
+
+.productCardOne .imageContainer .productImage {
+  height: 460px;
+  width: auto;
+  position: absolute;
+  bottom: -10px;
+  z-index: 2;
+}
+/*# sourceMappingURL=ProductCards.css.map */
