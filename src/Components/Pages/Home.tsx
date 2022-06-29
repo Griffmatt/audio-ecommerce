@@ -5,6 +5,7 @@ import ShopProducts from '../ShopProducts';
 import ProductCardOne from '../ProductCardOne';
 import ProductCardTwo from '../ProductCardTwo';
 import ProductCardThree from '../ProductCardThree';
+import ProductCardFour from '../ProductCardFour';
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
             <ProductCardTwo/>
             <ProductCardThree/>
           </div>
+          <ProductCardFour/>
         </div>
       </section>
     </>

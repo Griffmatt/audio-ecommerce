@@ -31,4 +31,18 @@
         }
 }
 
+.secondaryBanner{
+    background-color: $SecBlack;
+    display: flex;
+    justify-content: center;
+    color: $SecWhite;
+    width: 100%;
+    height: 336px;
+    position: relative;
+    h2{
+        position: absolute;
+        bottom: 97px;
+    }
+}
+
 

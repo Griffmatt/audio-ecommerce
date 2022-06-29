@@ -5,13 +5,14 @@ function Footer() {
   return (
     <div className="footer">
         <div className="footerWrapper">
+            <div className="footerBar"/>
             <div className="footerNav">
                 <Link to="/"> <img src="../assets/shared/desktop/logo.svg" alt="Logo" className="footerLogo"/></Link>
                 <ul>
                     <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/a">HEADPHONES</Link></li>
-                    <li><Link to="/s">SPEAKERS</Link></li>
-                    <li><Link to="/c">EARPHONES</Link></li>
+                    <li><Link to="/Headphones">HEADPHONES</Link></li>
+                    <li><Link to="/Speakers">SPEAKERS</Link></li>
+                    <li><Link to="/Earphones">EARPHONES</Link></li>
                 </ul>
             </div>
             <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>

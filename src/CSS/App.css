@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Manrope Bold";
-  font-weight: 800;
-  src: url("./Fonts/Manrope-Regular.ttf");
+  src: url("./Fonts/Manrope-Bold.ttf");
 }
 
 @font-face {
@@ -40,6 +39,7 @@ h2 {
   line-height: 44px;
   letter-spacing: 1.5px;
   font-family: "Manrope Bold";
+  margin: 0;
 }
 
 h3 {
@@ -92,6 +92,7 @@ h6 {
   background-color: #D87D4A;
   color: #FFFFFF;
   border: none;
+  cursor: pointer;
 }
 
 .buttonOne:hover {

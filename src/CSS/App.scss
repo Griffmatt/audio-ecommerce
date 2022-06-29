@@ -32,6 +32,7 @@ h2{
     line-height: 44px;
     letter-spacing: 1.5px;
     font-family: "Manrope Bold";
+    margin: 0;
 }
 
 h3{
@@ -88,6 +89,7 @@ h6{
     background-color: $MainOrange;
     color: $SecWhite;
     border: none;
+    cursor: pointer;
 }
 
 .buttonOne:hover{

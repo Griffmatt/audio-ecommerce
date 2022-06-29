@@ -3,7 +3,7 @@ import React from 'react'
 function ProductCardThree() {
   return (
     <div className="productCardThree">
-        <div className="cardOne"/>
+        <img className="cardOne" src={"/assets/home/desktop/image-earphones-yx1.jpg"} alt="YX1 Earphones"/>
         <div className="cardTwo">
             <div>
                 <h4>YX1 EARPHONES</h4>  
