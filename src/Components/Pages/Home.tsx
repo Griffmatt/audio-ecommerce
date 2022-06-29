@@ -22,9 +22,6 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="pageFooter">
-
-      </section>
     </>
   )
 }
