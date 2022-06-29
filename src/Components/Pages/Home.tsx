@@ -4,6 +4,7 @@ import Banner from '../Banner';
 import ShopProducts from '../ShopProducts';
 import ProductCardOne from '../ProductCardOne';
 import ProductCardTwo from '../ProductCardTwo';
+import ProductCardThree from '../ProductCardThree';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
           <div className="productCards">
             <ProductCardOne/>
             <ProductCardTwo/>
+            <ProductCardThree/>
           </div>
         </div>
       </section>
