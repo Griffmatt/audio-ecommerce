@@ -191,3 +191,32 @@
 
     }
 }
+
+.featuresCard{
+    display: flex;
+    justify-content: space-between;
+    .featureInfo{
+        max-width: 635px;
+        width: 60%;
+    }
+
+    .inTheBox{
+        width: 30%;
+        .boxItems{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .boxQuantity{
+            color: $MainOrange;
+            opacity: 2;
+            margin-right: 24px;
+        }
+        .boxItem{
+            opacity: .5;
+        }
+            p{
+                font-family: "Manrope Bold";
+            }
+        }
+    }
+}

@@ -305,4 +305,47 @@
   width: 57vw;
   max-width: 635px;
 }
+
+.featuresCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featuresCard .featureInfo {
+  max-width: 635px;
+  width: 60%;
+}
+
+.featuresCard .inTheBox {
+  width: 30%;
+}
+
+.featuresCard .inTheBox .boxItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.featuresCard .inTheBox .boxItems .boxQuantity {
+  color: #D87D4A;
+  opacity: 2;
+  margin-right: 24px;
+}
+
+.featuresCard .inTheBox .boxItems .boxItem {
+  opacity: .5;
+}
+
+.featuresCard .inTheBox .boxItems p {
+  font-family: "Manrope Bold";
+}
 /*# sourceMappingURL=ProductCards.css.map */
