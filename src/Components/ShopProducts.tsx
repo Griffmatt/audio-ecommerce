@@ -12,7 +12,7 @@ function ShopProducts() {
                     <img src={`/assets/shared/desktop/image-category-thumbnail-${product}.png`} alt={product} className="shopProductsImg"/>
                     <div className="shopProductInfo">
                         <h6>{`${product.toUpperCase()}`}</h6>
-                        <Link to="/">
+                        <Link to={`/${product}`}>
                             <div className="buttonTwo">
                                 <span className="subTitle">SHOP</span>
                                 <img src={"/assets/shared/desktop/icon-arrow-right.svg"}/>

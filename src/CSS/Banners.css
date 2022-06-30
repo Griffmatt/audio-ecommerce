@@ -10,7 +10,7 @@
 
 .banner {
   height: 80vh;
-  max-height: 900px;
+  max-height: 800px;
   width: 100%;
   max-width: 1600px;
   background-image: url("/public/assets/home/desktop/image-hero.jpg");

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from 'react-router-dom'
+
 function ProductCardThree() {
   return (
     <div className="productCardThree">
@@ -7,7 +9,7 @@ function ProductCardThree() {
         <div className="cardTwo">
             <div>
                 <h4>YX1 EARPHONES</h4>  
-                <button className="buttonThree">SEE PRODUCT</button>
+                <Link to="/yx1-earphones"><button className="buttonThree">SEE PRODUCT</button></Link>
             </div>
         </div>
     </div>

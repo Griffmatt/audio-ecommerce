@@ -1,10 +1,14 @@
 import React from 'react'
 
+import AddToCart from './AddToCart';
+import SeeProduct from './SeeProduct';
+
 interface ProductsType{
-    products: any[]
+    products: any[],
+    addToCart?: boolean
 }
 
-function ProductCard({products}:ProductsType) {
+function ProductCard({products, addToCart}:ProductsType) {
   return (
     <>
         {products.map(product=>{
@@ -14,7 +18,7 @@ function ProductCard({products}:ProductsType) {
                     <div className="cardTwo">
                         <h2>{product.name}</h2>  
                         <p>{product.description}</p>
-                        <button className="buttonOne">SEE PRODUCT</button>
+                        {addToCart?<AddToCart product={product}/>:<SeeProduct slug={product.slug}/>}
                     </div>
                 </div>
             )}

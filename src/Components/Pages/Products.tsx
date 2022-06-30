@@ -13,8 +13,6 @@ interface productsProps{
 
 function Products({type}:productsProps) {
   let filteredData = Data.filter(product=> product.category === type)
-
-  console.log(filteredData)
   return (
     <>
     <section className="homePageHeader">

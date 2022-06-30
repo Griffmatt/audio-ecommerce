@@ -86,50 +86,6 @@ h6 {
   font-family: "Manrope Bold";
 }
 
-.buttonOne {
-  width: 168px;
-  height: 48px;
-  background-color: #D87D4A;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
-}
-
-.buttonOne:hover {
-  background-color: #FBAF85;
-}
-
-.buttonTwo:hover {
-  color: #D87D4A;
-}
-
-.buttonThreeA {
-  border: none;
-  background-color: #000000;
-  color: #FFFFFF;
-  width: 160px;
-  height: 48px;
-  cursor: pointer;
-}
-
-.buttonThree {
-  border: 1.5px solid #000000;
-  color: #000000;
-  width: 160px;
-  height: 48px;
-  cursor: pointer;
-  background-color: rgba(216, 125, 74, 0);
-}
-
-.buttonThree:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-
-.buttonThreeA:hover {
-  background-color: #4C4C4C;
-}
-
 .homePageHeader {
   background-color: #191919;
   display: -webkit-box;
@@ -155,6 +111,12 @@ h6 {
           align-items: center;
 }
 
+.productHeader {
+  height: 99px;
+  width: 100%;
+  background-color: #000000;
+}
+
 .pageContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,8 +127,8 @@ h6 {
 }
 
 .pageWrapper {
-  max-width: 1600px;
-  width: 77%;
+  max-width: 1110px;
+  width: 98vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

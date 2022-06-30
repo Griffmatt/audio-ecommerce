@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ProductCardOne() {
   return (
@@ -10,7 +11,7 @@ function ProductCardOne() {
       <div className="productInfo">
         <h1>ZX9<br/>SPEAKER</h1>
         <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-        <button className="buttonThreeA">SEE PRODUCT</button>
+        <Link to="/zx9-speaker"><button className="buttonThreeA">SEE PRODUCT</button></Link>
       </div>
     </div>
   )

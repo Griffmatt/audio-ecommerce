@@ -25,6 +25,10 @@
 
 .productsPageCards {
   gap: 160px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .productCard {
@@ -47,6 +51,7 @@
 .productCard .cardOne {
   height: 560px;
   width: auto;
+  border-bottom: 8px;
 }
 
 .productCard .cardTwo {
@@ -192,6 +197,7 @@
   height: 320px;
   width: 37.5vw;
   min-width: 339px;
+  max-width: 850px;
   background-color: #F1F1F1;
   border-radius: 8px;
   display: -webkit-box;

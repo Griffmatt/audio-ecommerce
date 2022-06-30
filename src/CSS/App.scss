@@ -83,50 +83,6 @@ h6{
     font-family: "Manrope Bold";
 }
 
-.buttonOne{
-    width: 168px;
-    height: 48px;
-    background-color: $MainOrange;
-    color: $SecWhite;
-    border: none;
-    cursor: pointer;
-}
-
-.buttonOne:hover{
-    background-color: $SecOrange;
-}
-
-.buttonTwo:hover{
-    color: $MainOrange;
-}
-
-.buttonThreeA{
-    border: none;
-    background-color: $SecBlack;
-    color: $SecWhite;
-    width: 160px;
-    height: 48px;
-    cursor: pointer;
-}
-
-.buttonThree{
-    border:1.5px solid $SecBlack;
-    color: $SecBlack;
-    width: 160px;
-    height: 48px;
-    cursor: pointer;
-    background-color: rgba($MainOrange, 0);
-}
-
-.buttonThree:hover{
-    background-color: $SecBlack;
-    color: $SecWhite;
-}
-
-.buttonThreeA:hover{
-    background-color: $SecGrey;
-}
-
 
 .homePageHeader{
     background-color: $MainBlack;
@@ -143,14 +99,20 @@ h6{
     align-items: center;
 }
 
+.productHeader{
+    height: 99px;
+    width: 100%;
+    background-color: $SecBlack;
+}
+
 .pageContent{
     display: flex;
     justify-content: center;
 }
 
 .pageWrapper{
-    max-width: 1600px;
-    width: 77%;
+    max-width: 1110px;
+    width: 98vw ;
     display: flex;
     justify-content: center;
     flex-direction: column;

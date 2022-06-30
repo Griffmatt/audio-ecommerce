@@ -10,6 +10,7 @@
 
 .productsPageCards{
     gap: 160px;
+    flex-direction: column-reverse;
 }
 
 .productCard{
@@ -22,6 +23,7 @@
     .cardOne{
         height: 560px;
         width: auto;
+        border-bottom: 8px;
     }
     .cardTwo{
         height: 343px;
@@ -119,6 +121,7 @@
         height: 320px;
         width: 37.5vw;
         min-width: 339px;
+        max-width: 850px;
         background-color: $MainGrey;
         border-radius: 8px;
         display: flex;
