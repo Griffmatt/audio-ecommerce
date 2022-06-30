@@ -3,18 +3,18 @@ import React from 'react'
 import ShopProducts from '../ShopProducts';
 import ProductCardFour from '../ProductCardFour';
 import ProductCard from '../ProductCard';
+import ImageGrid from '../ImageGrid';
 
 import Data from "../../Data/data.json";
 
 interface ProductId{
-  id: any
+  slug: any
 }
 
 
-function Product({id}:ProductId) {
+function Product({slug}:ProductId) {
 
-  console.log(id)
-  let selectedProduct = Data.filter(product=> product.slug == id)
+  let selectedProduct = Data.filter(product=> product.slug === slug)
   return (
     <>
       <section className="productHeader"/>
@@ -23,6 +23,7 @@ function Product({id}:ProductId) {
           <div className="productsPageCards productCards">
               <ProductCard products={selectedProduct} addToCart={true}/>
             </div>
+            <ImageGrid images={selectedProduct[0].gallery}/>
           <ShopProducts/>
           <ProductCardFour/>
         </div>

@@ -58,10 +58,14 @@
     height: 48px;
     width: 120px;
     background-color: $MainGrey;
+    p{
+        user-select: none;
+    }
     .incrementButton{
         color: rgba($SecBlack, .25);
         cursor: pointer;
         line-height: 48px;
+        user-select: none;
     }
 
     .incrementButton:hover{

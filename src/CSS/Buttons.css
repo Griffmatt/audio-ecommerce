@@ -78,10 +78,21 @@
   background-color: #F1F1F1;
 }
 
+.incrementButtons p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .incrementButtons .incrementButton {
   color: rgba(0, 0, 0, 0.25);
   cursor: pointer;
   line-height: 48px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .incrementButtons .incrementButton:hover {

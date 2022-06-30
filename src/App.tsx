@@ -20,9 +20,9 @@ import {Routes, Route, useParams} from 'react-router-dom'
 function App() {
 
     const FilterProduct = () => {
-      const {id} = useParams()
+      const {slug} = useParams()
         return(
-          <Product id={id}/>
+          <Product slug={slug}/>
         )
     }
  
@@ -36,7 +36,7 @@ function App() {
        <Route path="/Speakers" element={<Products type="speakers"/>}/>
        <Route path="/Headphones" element={<Products type="headphones"/>}/>
        <Route path="/Earphones" element={<Products type="earphones"/>}/>
-       <Route path={`/:id`} element={<FilterProduct/>}/>
+       <Route path={`/:slug`} element={<FilterProduct/>}/>
       </Routes>
       <Footer/>
     </>

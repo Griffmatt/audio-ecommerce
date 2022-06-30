@@ -268,4 +268,41 @@
   width: 50%;
   border-radius: 8px;
 }
+
+.gridImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1110px;
+  max-height: 592px;
+}
+
+.gridImages .imgGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gridImages .imgGroup img {
+  width: 40vw;
+  max-width: 445px;
+  height: auto;
+}
+
+.gridImages img {
+  border-radius: 8px;
+  height: auto;
+  width: 57vw;
+  max-width: 635px;
+}
 /*# sourceMappingURL=ProductCards.css.map */
