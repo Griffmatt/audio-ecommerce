@@ -7,6 +7,7 @@ import ImageGrid from '../ImageGrid';
 import ProductFeatures from '../ProductFeatures';
 
 import Data from "../../Data/data.json";
+import OtherProducts from '../OtherProducts';
 
 interface ProductId{
   slug: any
@@ -27,6 +28,7 @@ function Product({slug}:ProductId) {
           </div>
           <ProductFeatures product={selectedProduct} />
           <ImageGrid images={selectedProduct.gallery}/>
+          <OtherProducts otherProducts={selectedProduct.others}/>
           <ShopProducts/>
           <ProductCardFour/>
         </div>

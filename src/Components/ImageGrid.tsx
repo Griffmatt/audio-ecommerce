@@ -1,7 +1,20 @@
 import React from 'react'
 
+
+interface Images{
+    mobile: string, 
+    tablet: string,
+    desktop: string
+}
+
+interface ImagesArray{
+    first: Images,
+    second: Images,
+    third: Images
+
+}
 interface ImagesType{
-    images: any
+    images: ImagesArray
 }
 
 function ImageGrid({images}: ImagesType) {
