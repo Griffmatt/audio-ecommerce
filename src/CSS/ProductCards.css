@@ -270,40 +270,27 @@
 }
 
 .gridImages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 1110px;
-  max-height: 592px;
-}
-
-.gridImages .imgGroup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.gridImages .imgGroup img {
-  width: 40vw;
-  max-width: 445px;
-  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  max-width: 100%;
+  gap: 30px;
+  min-height: 592px;
 }
 
 .gridImages img {
   border-radius: 8px;
-  height: auto;
-  width: 57vw;
-  max-width: 635px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .largeGridImage {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+  }
 }
 
 .featuresCard {
