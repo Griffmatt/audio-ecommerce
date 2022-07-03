@@ -24,7 +24,7 @@
 }
 
 .productsPageCards {
-  gap: 160px;
+  gap: 60px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -38,28 +38,29 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: horizontal;
+  gap: 25px;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 560px;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 560px;
   width: 100%;
 }
 
 .productCard .cardOne {
-  height: 560px;
-  width: auto;
-  border-bottom: 8px;
+  height: 352px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
 }
 
 .productCard .cardTwo {
-  height: 343px;
-  width: 445px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -69,28 +70,72 @@
           justify-content: space-between;
   -ms-flex-item-align: center;
       align-self: center;
+  width: 100%;
+  max-width: 572px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .productCard .cardTwo h2 {
   width: 75%;
 }
 
-.productCard:nth-of-type(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+@media only screen and (min-width: 768px) {
+  .singleProductCard .productCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .singleProductCard .productCard .cardOne {
+    height: 100%;
+    width: 40%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .singleProductCard .productCard .cardTwo {
+    width: 445px;
+    max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .productCard:nth-of-type(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .productsPageCards {
+    gap: 160px;
+  }
+  .productCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .productCard .cardOne {
+    height: 100%;
+    width: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .productCard .cardTwo {
+    width: 445px;
+    max-width: 50%;
+  }
 }
 
 .productCardOne {
   background-color: #D87D4A;
-  height: 560px;
+  min-height: 560px;
   width: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,7 +191,7 @@
   background-image: url("/public/assets/home/desktop/image-speaker-zx7.jpg");
   background-size: cover;
   width: 100%;
-  height: 320px;
+  min-height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,7 +219,7 @@
 
 .productCardThree {
   width: 100%;
-  height: 320px;
+  min-height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,23 +270,40 @@
 
 .productCardFour {
   width: 100%;
-  height: 588px;
+  min-height: 588px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 50px;
 }
 
 .productCardFour .cardOne {
-  height: 295px;
-  width: 455px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 270px;
+  text-align: center;
+  max-width: 573px;
 }
 
 .productCardFour .cardOne span {
@@ -262,34 +324,56 @@
 }
 
 .productCardFour .cardTwo {
-  background-image: url("/public/assets/shared/desktop/image-best-gear.jpg");
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
-  width: 50%;
+  width: 100%;
   border-radius: 8px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .productCardFour {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0px;
+  }
+  .productCardFour .cardOne {
+    width: 455px;
+    min-height: 288px;
+    text-align: left;
+  }
+  .productCardFour .cardTwo {
+    width: 50%;
+  }
 }
 
 .gridImages {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
   max-width: 100%;
   gap: 30px;
-  min-height: 592px;
 }
 
 .gridImages img {
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .largeGridImage {
     -ms-grid-column: 2;
     grid-column: 2;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1 / 3;
+  }
+  .gridImages {
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -300,15 +384,26 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 100px;
 }
 
 .featuresCard .featureInfo {
-  max-width: 635px;
-  width: 60%;
+  width: 100%;
 }
 
 .featuresCard .inTheBox {
-  width: 30%;
+  width: 100%;
+  max-width: 549px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .featuresCard .inTheBox .boxItems {
@@ -336,6 +431,38 @@
   font-family: "Manrope Bold";
 }
 
+@media only screen and (max-width: 500px) {
+  .featuresCard .inTheBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .featuresCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .featuresCard .featureInfo {
+    max-width: 635px;
+    width: 60%;
+  }
+  .featuresCard .inTheBox {
+    width: 30%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .otherProducts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,8 +485,14 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
 }
 
 .otherProducts .otherProductsCard {
@@ -379,8 +512,19 @@
 }
 
 .otherProducts .otherProductsCard img {
-  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 318px;
-  width: auto;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .otherProducts .otherProductsCards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=ProductCards.css.map */

@@ -98,4 +98,11 @@
 .incrementButtons .incrementButton:hover {
   color: #D87D4A;
 }
+
+.backButton {
+  opacity: .5;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+}
 /*# sourceMappingURL=Buttons.css.map */

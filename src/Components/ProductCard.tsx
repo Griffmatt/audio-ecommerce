@@ -13,6 +13,7 @@ interface Images{
 interface Products{
     id: number,
     image: Images,
+    categoryImage: Images,
     name: string,
     description: string,
     slug: string
@@ -25,12 +26,13 @@ interface ProductsType{
 }
 
 function ProductCard({products, addToCart}:ProductsType) {
+
   return (
     <>
         {products.map(product=>{
             return(
                 <div className="productCard" key={product.id}>
-                    <img className="cardOne" src={product.image.desktop} alt={product.name}/>
+                   <img className="cardOne" src={product.categoryImage.tablet} alt={product.name}/>
                     <div className="cardTwo">
                         <h2>{product.name}</h2>  
                         <p>{product.description}</p>

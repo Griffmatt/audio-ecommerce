@@ -47,6 +47,7 @@ h3 {
   line-height: 36px;
   letter-spacing: 1.15px;
   font-family: "Manrope Bold";
+  margin-top: 0;
 }
 
 h4 {
@@ -127,7 +128,7 @@ h6 {
 
 .pageWrapper {
   max-width: 1110px;
-  width: 98vw;
+  width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,8 +140,8 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10vh;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  padding-block: 10vh;
+  position: relative;
 }
 
 .pageFooter {

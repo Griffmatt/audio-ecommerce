@@ -23,7 +23,8 @@ function Product({slug}:ProductId) {
       <section className="productHeader"/>
       <section className="pageContent">
         <div className="pageWrapper">
-          <div className="productsPageCards productCards">
+          <p className="backButton">Go Back</p>
+          <div className="productCards singleProductCard">
               <ProductCard products={[selectedProduct]} addToCart={true}/>
           </div>
           <ProductFeatures product={selectedProduct} />
