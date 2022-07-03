@@ -1,15 +1,16 @@
 @import './variables.scss';
 
 .banner{
-        height: 80vh;
-        max-height: 800px;
+        max-height: 700px;
+        height: 90vh;
         width: 100%;
         max-width: 1600px;
-        background-image: url("/public/assets/home/desktop/image-hero.jpg");
+        background-image: url("/public/assets/home/mobile/image-header.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
         align-items: center;
+        justify-content: center;
         .overLine{
             color: rgba($SecWhite, .5)
         }
@@ -17,12 +18,12 @@
             color: $SecWhite;
         }
         .bannerContent{
-            max-width: 400px;
-            max-height: 350px;
+            max-width: 328px;
+            max-height: 290px;
             height: 38vh;
-            padding-left: 11.5%;
             display: flex;
             justify-content: space-between;
+            text-align: center;
             flex-direction: column;
             p{
                 color: rgba($SecWhite, .75);
@@ -30,6 +31,34 @@
             }
         }
 }
+
+@media only screen and (min-width: 728px){
+    .banner{
+        height: 750px;
+        background-image: url("/public/assets/home/tablet/image-header.jpg");
+        .bannerContent{
+            max-width: 380px;
+            max-height: 329px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .banner{
+        height: 80vh;
+        max-height: 800px;
+        background-image: url("/public/assets/home/desktop/image-hero.jpg");
+        justify-content: normal;
+        .bannerContent{
+            max-width: 400px;
+            max-height: 350px;
+            padding-left: 11.5%;
+            text-align: left;
+        }
+}
+}
+
+
 
 .secondaryBanner{
     background-color: $SecBlack;

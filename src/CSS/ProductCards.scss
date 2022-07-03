@@ -1,15 +1,17 @@
 @import './variables.scss';
 
+
 .productCards{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.previewCards{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 48px;
     height: auto;
-}
-
-.productsPageCards{
-    gap: 60px;
     flex-direction: column-reverse;
 }
 
@@ -43,8 +45,37 @@
     }
 }
 
+.previewCard{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-direction: column;
+    min-height: 560px;
+    width: 100%;
+    .cardOne{
+        height: 352px;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+    .cardTwo{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: center;
+        width: 100%;
+                max-width: 572px;
+                align-items: center;
+                text-align: center;
+        h2{
+            width: 75%;
+        }
+    }
+}
+
 @media only screen and (min-width: 768px){
-    .singleProductCard{
         .productCard{
             flex-direction: row;
             .cardOne{
@@ -57,19 +88,17 @@
                 max-width: 50%;
             }
         }
-    }
-
 }
 
 @media only screen and (min-width: 1024px){
-    .productCard:nth-of-type(even){
+    .previewCard:nth-of-type(even){
         flex-direction: row-reverse;
     }
 
-    .productsPageCards{
+    .previewCards{
         gap: 160px;
     }
-    .productCard{
+    .previewCard{
         flex-direction: row;
         .cardOne{
             height: 100%;

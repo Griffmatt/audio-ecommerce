@@ -24,9 +24,7 @@ function Product({slug}:ProductId) {
       <section className="pageContent">
         <div className="pageWrapper">
           <p className="backButton">Go Back</p>
-          <div className="productCards singleProductCard">
-              <ProductCard products={[selectedProduct]} addToCart={true}/>
-          </div>
+          <ProductCard product={selectedProduct}/>
           <ProductFeatures product={selectedProduct} />
           <ImageGrid images={selectedProduct.gallery}/>
           <OtherProducts otherProducts={selectedProduct.others}/>

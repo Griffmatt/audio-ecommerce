@@ -5,7 +5,7 @@ import Data from "../../Data/data.json";
 import SecondaryBanner from '../SecondaryBanner';
 import ShopProducts from '../ShopProducts';
 import ProductCardFour from '../ProductCardFour';
-import ProductCard from '../ProductCard'
+import PreviewCards from '../PreviewCards';
 
 interface productsProps{
   type: string
@@ -20,9 +20,7 @@ function Products({type}:productsProps) {
     </section>
     <section className="pageContent">
       <div className="pageWrapper">
-        <div className="productsPageCards productCards">
-            <ProductCard products={filteredData}/>
-          </div>
+        <PreviewCards products={filteredData}/>
         <ShopProducts/>
         <ProductCardFour/>
       </div>

@@ -16,19 +16,24 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 48px;
+}
+
+.previewCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 48px;
   height: auto;
-}
-
-.productsPageCards {
-  gap: 60px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
 }
 
 .productCard {
@@ -82,35 +87,58 @@
   width: 75%;
 }
 
-@media only screen and (min-width: 768px) {
-  .singleProductCard .productCard {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .singleProductCard .productCard .cardOne {
-    height: 100%;
-    width: 40%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  .singleProductCard .productCard .cardTwo {
-    width: 445px;
-    max-width: 50%;
-  }
+.previewCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 560px;
+  width: 100%;
 }
 
-@media only screen and (min-width: 1024px) {
-  .productCard:nth-of-type(even) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .productsPageCards {
-    gap: 160px;
-  }
+.previewCard .cardOne {
+  height: 352px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+}
+
+.previewCard .cardTwo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  max-width: 572px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.previewCard .cardTwo h2 {
+  width: 75%;
+}
+
+@media only screen and (min-width: 768px) {
   .productCard {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -119,11 +147,39 @@
   }
   .productCard .cardOne {
     height: 100%;
+    width: 40%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .productCard .cardTwo {
+    width: 445px;
+    max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .previewCard:nth-of-type(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .previewCards {
+    gap: 160px;
+  }
+  .previewCard {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .previewCard .cardOne {
+    height: 100%;
     width: 50%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .productCard .cardTwo {
+  .previewCard .cardTwo {
     width: 445px;
     max-width: 50%;
   }

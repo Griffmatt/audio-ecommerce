@@ -9,11 +9,11 @@
 }
 
 .banner {
-  height: 80vh;
-  max-height: 800px;
+  max-height: 700px;
+  height: 90vh;
   width: 100%;
   max-width: 1600px;
-  background-image: url("/public/assets/home/desktop/image-hero.jpg");
+  background-image: url("/public/assets/home/mobile/image-header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -22,6 +22,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .banner .overLine {
@@ -33,16 +36,16 @@
 }
 
 .banner .bannerContent {
-  max-width: 400px;
-  max-height: 350px;
+  max-width: 328px;
+  max-height: 290px;
   height: 38vh;
-  padding-left: 11.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -52,6 +55,34 @@
 .banner .bannerContent p {
   color: rgba(255, 255, 255, 0.75);
   max-width: 350px;
+}
+
+@media only screen and (min-width: 728px) {
+  .banner {
+    height: 750px;
+    background-image: url("/public/assets/home/tablet/image-header.jpg");
+  }
+  .banner .bannerContent {
+    max-width: 380px;
+    max-height: 329px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner {
+    height: 80vh;
+    max-height: 800px;
+    background-image: url("/public/assets/home/desktop/image-hero.jpg");
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  .banner .bannerContent {
+    max-width: 400px;
+    max-height: 350px;
+    padding-left: 11.5%;
+    text-align: left;
+  }
 }
 
 .secondaryBanner {

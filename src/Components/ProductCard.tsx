@@ -1,7 +1,8 @@
 import React from 'react'
 
+
 import AddToCart from './AddToCart';
-import SeeProduct from './SeeProduct';
+
 
 
 interface Images{
@@ -13,7 +14,6 @@ interface Images{
 interface Products{
     id: number,
     image: Images,
-    categoryImage: Images,
     name: string,
     description: string,
     slug: string
@@ -21,27 +21,21 @@ interface Products{
 }
 
 interface ProductsType{
-    products: Products[],
-    addToCart?: boolean
+    product: Products,
 }
 
-function ProductCard({products, addToCart}:ProductsType) {
+function ProductCard({product}:ProductsType) {
 
   return (
-    <>
-        {products.map(product=>{
-            return(
-                <div className="productCard" key={product.id}>
-                   <img className="cardOne" src={product.categoryImage.tablet} alt={product.name}/>
-                    <div className="cardTwo">
-                        <h2>{product.name}</h2>  
-                        <p>{product.description}</p>
-                        {addToCart?<AddToCart product={product}/>:<SeeProduct slug={product.slug}/>}
-                    </div>
-                </div>
-            )}
-        )}
-    </>
+    <div className="productCard" key={product.id}>
+        <img className="cardOne" src={product.image.desktop} alt={product.name}/>
+        <div className="cardTwo">
+            <h2>{product.name}</h2>  
+            <p>{product.description}</p>
+            <AddToCart product={product}/>
+        </div>
+    </div>
+
   )
 }
 
