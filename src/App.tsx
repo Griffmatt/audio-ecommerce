@@ -1,5 +1,5 @@
 import React from "react";
-import "./sass/Styles.scss";
+import "./sass/styles.scss";
 
 
 import NavBar from "./Components/NavBar";
@@ -27,9 +27,9 @@ function App() {
       <NavBar/>
       <Routes>
        <Route path="/" element={<Home/>}/>
-       <Route path="/Speakers" element={<Products type="speakers"/>}/>
-       <Route path="/Headphones" element={<Products type="headphones"/>}/>
-       <Route path="/Earphones" element={<Products type="earphones"/>}/>
+       <Route path="/speakers" element={<Products type="speakers"/>}/>
+       <Route path="/headphones" element={<Products type="headphones"/>}/>
+       <Route path="/earphones" element={<Products type="earphones"/>}/>
        <Route path={`/:slug`} element={<FilterProduct/>}/>
       </Routes>
       <Footer/>

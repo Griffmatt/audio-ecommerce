@@ -29,7 +29,7 @@ function PreviewCards({products}:ProductsType) {
     <div className="previewCards">
          {products.map((product)=>{ 
             return(
-                <ProductPreview product={product}/>
+                <ProductPreview product={product} key={product.id}/>
             )
         })}
     </div>

@@ -1,4 +1,4 @@
-@import '../variables/Variables.scss';
+@use "../variables" as *;
 
 .buttonOne{
     width: 168px;
@@ -61,16 +61,16 @@
     p{
         user-select: none;
     }
-    .incrementButton{
-        color: rgba($SecBlack, .25);
-        cursor: pointer;
-        line-height: 48px;
-        user-select: none;
-    }
+}
+.incrementButton{
+    color: rgba($SecBlack, .25);
+    cursor: pointer;
+    line-height: 48px;
+    user-select: none;
+}
 
-    .incrementButton:hover{
-        color: $MainOrange;
-    }
+.incrementButton:hover{
+    color: $MainOrange;
 }
 
 .backButton{
@@ -78,4 +78,9 @@
     position: absolute;
     top: 5vh;
     left: 0;
+    cursor: pointer;
+}
+
+.backButton:hover{
+    opacity: .8;
 }

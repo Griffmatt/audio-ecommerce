@@ -1,4 +1,4 @@
-@import '../variables/Variables.scss';
+@use "../variables" as *;
 
 p{
     font-size: 15px;

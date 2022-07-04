@@ -1,6 +1,20 @@
 import React from 'react'
 
-function ProductFeatures({product}: any) {
+interface ProductIncludes{
+    quantity: number,
+    item: string
+}
+
+interface ProductInfo{
+    includes: ProductIncludes[],
+    features: string
+}
+
+interface Product{
+    product: ProductInfo
+}
+
+function ProductFeatures({product}: Product) {
 
   return (
     <div className="featuresCard">
@@ -11,12 +25,9 @@ function ProductFeatures({product}: any) {
         <div className="inTheBox">
             <h3>IN THE BOX</h3>
             <div className="boxItems">
-                {product.includes.map((item: {
-                        quantity: number,
-                        item: string
-                    })=>{
+                {product.includes.map((item, index)=>{
                     return(
-                        <p><span className="boxQuantity">{item.quantity}x</span><span className="boxItem">{item.item}</span></p>
+                        <p key={index}><span className="boxQuantity">{item.quantity}x</span><span className="boxItem">{item.item}</span></p>
                     )
                 })}
             </div>

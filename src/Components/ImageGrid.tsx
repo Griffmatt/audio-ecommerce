@@ -19,12 +19,11 @@ interface ImagesType{
 
 function ImageGrid({images}: ImagesType) {
 
-    console.log(images)
   return (
     <div className="gridImages">
-        <img src={images.first.desktop} />
-        <img src={images.second.desktop} />
-        <img src={images.third.desktop} className="largeGridImage"/>
+        <img  src={images.first.desktop} alt="" />
+        <img src={images.second.desktop} alt="" />
+        <img src={images.third.desktop} className="largeGridImage" alt="" />
     </div>
   )
 }

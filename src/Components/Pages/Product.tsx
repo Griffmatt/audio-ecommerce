@@ -9,6 +9,8 @@ import ProductFeatures from '../ProductFeatures';
 import Data from "../../Data/data.json";
 import OtherProducts from '../OtherProducts';
 
+import {useNavigate} from "react-router-dom"
+
 interface ProductId{
   slug: any
 }
@@ -17,13 +19,18 @@ interface ProductId{
 function Product({slug}:ProductId) {
 
   let selectedProduct = Data.filter(product=> product.slug === slug)[0]
-  console.log(selectedProduct)
+
+  const navigate = useNavigate()
+
+  const handleNavigation = () => {
+    navigate(-1)
+  }
   return (
     <>
       <section className="productHeader"/>
       <section className="pageContent">
         <div className="pageWrapper">
-          <p className="backButton">Go Back</p>
+          <p className="backButton" onClick={handleNavigation}>Go Back</p>
           <ProductCard product={selectedProduct}/>
           <ProductFeatures product={selectedProduct} />
           <ImageGrid images={selectedProduct.gallery}/>

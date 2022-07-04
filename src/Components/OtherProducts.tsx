@@ -15,21 +15,21 @@ interface product {
 
 }
 
-interface OtherProducts {
+interface Products {
     otherProducts: product[]
 
 }
 
 
-function OtherProducts({otherProducts}: OtherProducts) {
+function OtherProducts({otherProducts}: Products) {
   return (
     <div className="otherProducts">
         <h3>YOU MAY ALSO LIKE</h3>
             <div className="otherProductsCards">
                 {otherProducts.map((product: product)=>{
                     return(
-                        <div className="otherProductsCard">
-                            <img src={product.image.desktop}/>
+                        <div className="otherProductsCard" key={product.slug}>
+                            <img src={product.image.desktop} alt=""/>
                             <h5>{product.name}</h5>
                             <Link to={`/${product.slug}`}><button className="buttonOne">SEE PRODUCT</button></Link>
                         </div>
