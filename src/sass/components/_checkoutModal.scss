@@ -1,0 +1,75 @@
+@use "../variables" as *;
+
+.modalBackground{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba($SecBlack, 0);
+    justify-content: center;
+    display: flex;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.showModal{
+    background-color: rgba($SecBlack, .5);
+    z-index: 90;
+    height: 200vh;
+}
+
+
+.modalWrapper{
+    width: 90vw;
+    max-width: 1600px;
+    position: relative;
+}
+
+.checkoutModal{
+    background-color: $SecWhite;
+    border-radius: 8px;
+    height: 488px;
+    max-width: 313px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: -500px;
+    transition: top .3s ease;
+    padding: 32px;
+    z-index: 91;
+
+    .buttonOne{
+        width: 100%;
+    }
+
+}
+
+.checkoutModal.slideModal{
+    top: 132px;
+}
+
+.checkOutItems{
+    h6{
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.checkoutContent{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    div{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        p{
+            opacity: .5;
+        }
+    }
+}
+

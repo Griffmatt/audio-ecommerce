@@ -82,5 +82,16 @@
 }
 
 .backButton:hover{
-    opacity: .8;
+    color: $MainOrange;
+    opacity: 1;
+}
+
+.removeAllButton{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.removeAllButton:hover{
+    color: $MainOrange;
+    opacity: 1;
 }

@@ -1,8 +1,14 @@
 import React from 'react'
 
+import BackButton from '../BackButton'
+
 function Checkout() {
   return (
-    <div>Checkout</div>
+    <section className="pageContent">
+        <div className="pageWrapper">
+          <BackButton/>
+        </div>
+      </section>
   )
 }
 

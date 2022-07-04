@@ -10,6 +10,8 @@ import Footer from "./Components/Footer";
 import ScrollToTop from "./Utilities/ScrollToTop";
 
 import {Routes, Route, useParams} from 'react-router-dom'
+import CheckoutModal from "./Components/CheckoutModal";
+import { ModalContextProvider } from "./context/ModalContext";
 
 function App() {
 
@@ -22,9 +24,10 @@ function App() {
  
 
   return (
-    <>
+    <ModalContextProvider>
     <ScrollToTop/>
       <NavBar/>
+      <CheckoutModal/>
       <Routes>
        <Route path="/" element={<Home/>}/>
        <Route path="/speakers" element={<Products type="speakers"/>}/>
@@ -33,7 +36,7 @@ function App() {
        <Route path={`/:slug`} element={<FilterProduct/>}/>
       </Routes>
       <Footer/>
-    </>
+    </ModalContextProvider>
   );
 }
 

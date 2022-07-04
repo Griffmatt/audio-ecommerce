@@ -1,0 +1,33 @@
+import React from 'react'
+import { useModal } from '../context/ModalContext'
+
+function CheckoutModal() {
+
+const { handleModalClick, hideModal } = useModal()
+  return (
+    <div className={`modalBackground ${hideModal?"showModal": ""}`} onClick={handleModalClick}>
+        <div className="modalWrapper">
+            <div className={`checkoutModal ${hideModal?"slideModal": ""}`} >
+                <div className="checkoutContent">
+                    <div >
+                        <h6>{`CART (3)`}</h6>
+                        <p className="removeAllButton">Remove All</p>
+                    </div>
+                    <div className="checkOutItems">
+                        <h6>Add Items To Your Cart</h6>
+                    </div>
+                </div>
+                <div className="checkoutContent">
+                    <div>
+                        <p>TOTAL</p>
+                        <h6>$5,4982</h6>
+                    </div>
+                    <button className="buttonOne">CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default CheckoutModal

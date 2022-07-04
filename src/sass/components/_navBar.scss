@@ -1,12 +1,13 @@
 @use "../variables" as *;
 
 .navBar{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 100;
+    z-index: 101;
+    background-color: $SecBlack;
     .navWrapper{
         max-width: 1600px;
         display: flex;
@@ -14,17 +15,22 @@
         align-items: center;
         padding-top: 35px;
         padding-bottom: 35px;
-        width: 77%;
+        width: 90%;
         border-bottom: 1px solid #979797;
+        position: relative;
         .navLogo{
             height: auto;
             width: 143px;
             cursor: pointer;
         }
-        .navCheckout{
+        svg{
             height: 20px;
             width: auto;
             cursor: pointer;
+            fill: $SecWhite;
+        }
+        svg:hover{
+            fill: $MainOrange;
         }
         ul{
             padding: 0;
