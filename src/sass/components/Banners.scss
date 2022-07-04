@@ -1,11 +1,11 @@
-@import './variables.scss';
+@import '../variables/Variables.scss';
 
 .banner{
         max-height: 700px;
         height: 90vh;
         width: 100%;
         max-width: 1600px;
-        background-image: url("/public/assets/home/mobile/image-header.jpg");
+        background-image: url("../../../public/assets/home/mobile/image-header.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -35,7 +35,7 @@
 @media only screen and (min-width: 728px){
     .banner{
         height: 750px;
-        background-image: url("/public/assets/home/tablet/image-header.jpg");
+        background-image: url("../../../public/assets/home/tablet/image-header.jpg");
         .bannerContent{
             max-width: 380px;
             max-height: 329px;
@@ -47,7 +47,7 @@
     .banner{
         height: 80vh;
         max-height: 800px;
-        background-image: url("/public/assets/home/desktop/image-hero.jpg");
+        background-image: url("../../../public/assets/home/desktop/image-hero.jpg");
         justify-content: normal;
         .bannerContent{
             max-width: 400px;

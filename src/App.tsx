@@ -1,12 +1,6 @@
 import React from "react";
-import "./CSS/App.css";
-import "./CSS/Variables.css";
-import "./CSS/NavBar.css";
-import "./CSS/Banners.css";
-import "./CSS/ShopProducts.css";
-import "./CSS/ProductCards.css";
-import "./CSS/Footer.css";
-import "./CSS/Buttons.css"
+import "./sass/Styles.scss";
+
 
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Pages/Home";
