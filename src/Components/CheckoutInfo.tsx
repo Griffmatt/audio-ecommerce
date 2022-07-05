@@ -39,7 +39,7 @@ function Checkoutinfo() {
                 <h6 className="subTitle">SHIPPING INFO</h6>
                 <div className="formInputs">
                     <label className="largeInput">
-                        Adress
+                        Address
                         <input className="largeInput"/>
                     </label> 
                     <label>

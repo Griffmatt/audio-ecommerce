@@ -27,7 +27,7 @@ function ProductPreview({product}:ProductsType) {
   return (
 
     <div className="previewCard" key={product.id}>
-        <img className="cardOne" src={product.categoryImage.tablet} alt={product.name}/>
+        <img className="cardOne" src={product.categoryImage.desktop} alt={product.name}/>
         <div className="cardTwo">
             <h2>{product.name}</h2>  
             <p>{product.description}</p>
