@@ -7,7 +7,7 @@
     justify-content: center;
     display: flex;
     z-index: -1;
-    transition: all .3s ease-in-out;
+    transition: z-index .3s ease-in-out;
 }
 
 .showModal{
@@ -16,7 +16,7 @@
 
 .modalBackdrop{
     background-color: rgba($SecBlack, 0);
-    transition: all .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -29,8 +29,9 @@
 .modalWrapper{
     width: 90vw;
     max-width: 1600px;
-    height: 0;
     position: relative;
+    overflow-y: hidden;
+    margin-top: 100px;
 }
 
 .checkoutModal{
@@ -46,7 +47,7 @@
     position: absolute;
     right: 0;
     top: -600px;
-    transition: top .3s ease;
+    transition: top .3s ease-in-out;
     padding: 32px;
     z-index: 91;
     .buttonOne{
@@ -56,7 +57,7 @@
 }
 
 .slideModal{
-    top: 132px;
+    top: 32px;
 }
 
 .checkOutItems{
