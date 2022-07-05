@@ -1,0 +1,110 @@
+@use"../variables" as *;
+
+.checkoutInfoWrapper{
+    width: 100%;
+    max-width: 730px;
+    background-color: $SecWhite;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding-block: 54px;
+    border-radius: 8px;
+    h6{
+        color: $MainOrange;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 90%;
+        h3{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.checkoutInfoRow{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    label{
+        font-size: 12px;
+        font-family:"Manrope Bold", Georgia, serif;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        width: 48%;
+    }
+
+    input{
+        height: 54px;
+        border-radius: 8px;
+        border: 1px solid $LightGrey;
+        text-indent: 24px;
+        font-size: 14px;
+        font-family:"Manrope Bold", Georgia, serif;
+    }
+
+    input:focus{
+        border-color: $MainOrange;
+    }
+
+    input:hover{
+        border-color: $MainOrange
+    }
+
+    .formInputs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 24px;
+        .largeInput{
+            width: 100%;
+        }
+
+        .checkoutRadioButtons{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 48%;
+            label{
+                height: 54px;
+                width: 100%;
+                border-radius: 8px;
+                border: 1px solid $LightGrey;
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: center;
+                font-size: 14px;
+                cursor: pointer;
+                input{
+                    width: 20px;
+                    height: 20px;
+                    margin: 16px;
+                }
+                
+            }
+
+            label:hover{
+                border-color: $MainOrange;
+            }
+        }
+    }
+}
+
+.cashOnDemand{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    p{
+        width: 100%;
+    }
+    img{
+        width: 48px;
+        height: 48px;
+    }
+}
