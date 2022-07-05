@@ -7,7 +7,8 @@ interface ModalContextProviderProps{
 
 type ModalContextType = {
     handleModalClick: () => void,
-    hideModal: boolean
+    closeModal: () => void,
+    modalShown: boolean
 }
 
 const ModalContext = createContext({} as ModalContextType)
@@ -18,14 +19,18 @@ export function useModal() {
 
 
 export function ModalContextProvider({ children }: ModalContextProviderProps){
-    const [hideModal, setHideModal] = useState(false)
+    const [modalShown, setModalShown] = useState(false)
 
     const handleModalClick = () => {
-        setHideModal(!hideModal)
+        setModalShown(!modalShown)
+    }
+
+    function closeModal() {
+        setModalShown(false)
     }
 
     return (
-        <ModalContext.Provider value={{handleModalClick, hideModal}}>
+        <ModalContext.Provider value={{handleModalClick, closeModal, modalShown}}>
             {children}
         </ModalContext.Provider>
     )

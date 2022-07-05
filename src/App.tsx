@@ -13,6 +13,7 @@ import {Routes, Route, useParams} from 'react-router-dom'
 import CheckoutModal from "./Components/CheckoutModal";
 import { ModalContextProvider } from "./context/ModalContext";
 
+
 function App() {
 
     const FilterProduct = () => {
@@ -21,7 +22,6 @@ function App() {
           <Product slug={slug}/>
         )
     }
- 
 
   return (
     <ModalContextProvider>

@@ -4,7 +4,6 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background-color: rgba($SecBlack, 0);
     justify-content: center;
     display: flex;
     z-index: -1;
@@ -12,23 +11,33 @@
 }
 
 .showModal{
-    background-color: rgba($SecBlack, .5);
     z-index: 90;
-    height: 200vh;
 }
 
+.modalBackdrop{
+    background-color: rgba($SecBlack, 0);
+    transition: all .3s ease-in-out;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.backdropFade{
+    background-color: rgba($SecBlack, .5);
+}
 
 .modalWrapper{
     width: 90vw;
     max-width: 1600px;
+    height: 0;
     position: relative;
 }
 
 .checkoutModal{
     background-color: $SecWhite;
     border-radius: 8px;
-    height: 488px;
     max-width: 313px;
+    height: 488px;
     width: 90vw;
     display: flex;
     justify-content: space-between;
@@ -36,18 +45,17 @@
     align-items: center;
     position: absolute;
     right: 0;
-    top: -500px;
+    top: -600px;
     transition: top .3s ease;
     padding: 32px;
     z-index: 91;
-
     .buttonOne{
         width: 100%;
     }
 
 }
 
-.checkoutModal.slideModal{
+.slideModal{
     top: 132px;
 }
 

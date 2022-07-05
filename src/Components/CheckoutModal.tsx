@@ -1,13 +1,15 @@
 import React from 'react'
 import { useModal } from '../context/ModalContext'
 
+
 function CheckoutModal() {
 
-const { handleModalClick, hideModal } = useModal()
+const { handleModalClick, modalShown } = useModal()
+
   return (
-    <div className={`modalBackground ${hideModal?"showModal": ""}`} onClick={handleModalClick}>
+    <div className={`modalBackground ${modalShown?"showModal": ""}`}>
         <div className="modalWrapper">
-            <div className={`checkoutModal ${hideModal?"slideModal": ""}`} >
+            <div className={`checkoutModal ${modalShown?"slideModal": ""}`} >
                 <div className="checkoutContent">
                     <div >
                         <h6>{`CART (3)`}</h6>
@@ -26,6 +28,7 @@ const { handleModalClick, hideModal } = useModal()
                 </div>
             </div>
         </div>
+        <div className={`modalBackdrop ${modalShown?"backdropFade": ""}`} onClick={handleModalClick}/>
     </div>
   )
 }
