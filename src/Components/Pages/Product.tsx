@@ -22,7 +22,7 @@ function Product({slug}:ProductId) {
 
   return (
     <>
-      <section className="productHeader"/>
+      <section className="noBanner"/>
       <section className="pageContent">
         <div className="pageWrapper">
           <BackButton/>

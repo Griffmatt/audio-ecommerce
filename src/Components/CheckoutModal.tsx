@@ -1,6 +1,8 @@
 import React from 'react'
 import { useModal } from '../context/ModalContext'
 
+import { Link } from 'react-router-dom'
+
 
 function CheckoutModal() {
 
@@ -24,7 +26,7 @@ const { handleModalClick, modalShown } = useModal()
                         <p>TOTAL</p>
                         <h6>$5,4982</h6>
                     </div>
-                    <button className="buttonOne">CHECKOUT</button>
+                    <Link to="/checkout"><button className="buttonOne" onClick={handleModalClick}>CHECKOUT</button></Link>
                 </div>
             </div>
         </div>
