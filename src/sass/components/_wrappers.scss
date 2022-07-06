@@ -42,3 +42,10 @@
     height: 200px;
     width: 100%;
 }
+
+.checkoutWrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}

@@ -18,7 +18,7 @@ function Checkoutinfo() {
         <form>
             <h3>CHECKOUT</h3>
             <div className="checkoutInfoRow">
-                <h6 className="subTitle">BILLING DETAILS</h6>
+                <h6>BILLING DETAILS</h6>
                 <div className="formInputs">
                     <label>
                         Name 
@@ -36,7 +36,7 @@ function Checkoutinfo() {
                 </div>
             </div>
             <div className="checkoutInfoRow">
-                <h6 className="subTitle">SHIPPING INFO</h6>
+                <h6>SHIPPING INFO</h6>
                 <div className="formInputs">
                     <label className="largeInput">
                         Address
@@ -59,7 +59,7 @@ function Checkoutinfo() {
                 </div>
             </div>
             <div className="checkoutInfoRow">
-                <h6 className="subTitle">PAYMENT DETAILS</h6>
+                <h6>PAYMENT DETAILS</h6>
                 <div className="formInputs">
                     <label>Payment Method</label>
                     <div className="checkoutRadioButtons">

@@ -9,6 +9,8 @@
     justify-content: center;
     padding-block: 54px;
     border-radius: 8px;
+
+    margin-top: 20px;
     h6{
         color: $MainOrange;
     }
@@ -30,13 +32,13 @@
     gap: 16px;
 
     label{
-        font-size: 12px;
+        font-size: 14px;
         font-family:"Manrope Bold", Georgia, serif;
         font-weight: 700;
         display: flex;
         flex-direction: column;
         gap: 9px;
-        width: 48%;
+        width: 100%;
     }
 
     input{
@@ -65,33 +67,34 @@
             width: 100%;
         }
 
-        .checkoutRadioButtons{
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 48%;
-            label{
-                height: 54px;
-                width: 100%;
-                border-radius: 8px;
-                border: 1px solid $LightGrey;
-                justify-content: flex-start;
-                flex-direction: row;
-                align-items: center;
-                font-size: 14px;
-                cursor: pointer;
-                input{
-                    width: 20px;
-                    height: 20px;
-                    margin: 16px;
-                }
-                
-            }
+    }
+}
 
-            label:hover{
-                border-color: $MainOrange;
-            }
+.checkoutRadioButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    label{
+        height: 54px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid $LightGrey;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        input{
+            width: 20px;
+            height: 20px;
+            margin: 16px;
         }
+        
+    }
+
+    label:hover{
+        border-color: $MainOrange;
     }
 }
 
@@ -107,4 +110,94 @@
         width: 48px;
         height: 48px;
     }
+}
+
+@media screen and (min-width: $Tablet) {
+    .checkoutInfoRow{
+        label{
+            width: 48%;
+        }
+    }
+
+    .checkoutRadioButtons{
+        width: 48%;
+        label{
+            width: 100%;
+        }
+    }
+}
+
+.checkoutSummaryWrapper{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    background-color: $SecWhite;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding-block: 32px;
+    border-radius: 8px;
+    height: min-content;
+}
+
+.checkoutSummary{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 90%;
+    height: min-content;
+    button{
+        width: 100%;
+    }
+}
+
+.checkoutItems{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.checkoutItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        font-family: "Manrope Bold", Georgia, serif;
+    }
+}
+
+.checkoutItemInfo{
+    display: flex;
+    gap: 16px;
+    img{
+        height: 64px;
+        width: auto;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .underLine{
+            opacity: .5;
+        }
+    }
+}
+
+.itemAmount{
+    opacity: .5;
+}
+
+.checkoutInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.checkoutGrandTotal{
+    display: flex;
+    justify-content: space-between;
 }
