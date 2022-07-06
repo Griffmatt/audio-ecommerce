@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom'
 
 function CheckoutModal() {
 
-const { handleModalClick, modalShown } = useModal()
+const {showCheckoutModal, closeModal } = useModal()
 
   return (
-    <div className={`modalBackground ${modalShown?"showModal": ""}`}>
-        <div className="modalWrapper">
-            <div className={`checkoutModal ${modalShown?"slideModal": ""}`} >
+    <div className={`modalBackground ${showCheckoutModal?"showCheckoutModal": ""}`}>
+        <div className="checkoutModalWrapper">
+            <div className={`checkoutModal ${showCheckoutModal?"slideCheckoutModal": ""}`} >
                 <div className="checkoutContent">
                     <div >
                         <h6>{`CART (3)`}</h6>
@@ -26,11 +26,11 @@ const { handleModalClick, modalShown } = useModal()
                         <p>TOTAL</p>
                         <h6>$5,4982</h6>
                     </div>
-                    <Link to="/checkout"><button className="buttonOne" onClick={handleModalClick}>CHECKOUT</button></Link>
+                    <Link to="/checkout"><button className="buttonOne" onClick={closeModal}>CHECKOUT</button></Link>
                 </div>
             </div>
         </div>
-        <div className={`modalBackdrop ${modalShown?"backdropFade": ""}`} onClick={handleModalClick}/>
+        <div className={`modalBackdrop ${showCheckoutModal?"backdropFade": ""}`} onClick={closeModal}/>
     </div>
   )
 }

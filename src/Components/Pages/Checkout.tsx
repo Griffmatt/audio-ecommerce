@@ -3,6 +3,7 @@ import React from 'react'
 import BackButton from '../BackButton'
 import CheckoutInfo from '../CheckoutInfo'
 import CheckoutSummary from '../CheckoutSummary'
+import ConfirmedOrderModal from '../ConfirmedOrderModal'
 
 function Checkout() {
   return (
@@ -16,6 +17,7 @@ function Checkout() {
               <CheckoutSummary/>
             </div>
           </div>
+          <ConfirmedOrderModal/>
         </section>
     </>
   )

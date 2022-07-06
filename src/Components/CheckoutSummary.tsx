@@ -1,10 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useModal } from '../context/ModalContext'
 
 function CheckoutSummary() {
+
+  const { handleModalClick } = useModal()
+
+  const [message, setMessage] = useState("CONTINUE & PAY")
+
+  const handleClick = () => {
+    setMessage("CONFIRMING PAYMENT")
+    setTimeout(()=>{handleModalClick("confirm"); setMessage("CONFIRMED")}, 1000)
+  }
+
   return (
     <div className="checkoutSummaryWrapper">
         <div className="checkoutSummary">
-            <h6>CHECKOUT</h6>
+            <h6>SUMMARY</h6>
             <div className="checkoutItems">
                 <div className="checkoutItem">
                   <div className="checkoutItemInfo">
@@ -59,7 +70,7 @@ function CheckoutSummary() {
               <p>Grand Total</p>
               <h6>$50</h6>
             </div>
-            <button className="buttonOne">CONTINUE & PAY</button>
+            <button className="buttonOne" onClick={handleClick}>{message}</button>
         </div>
     </div>
   )

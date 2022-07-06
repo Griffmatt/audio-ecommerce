@@ -171,13 +171,13 @@
 @media only screen and (min-width: $Desktop){
     .productCardOne{
         min-height: 560px;
+        flex-direction: row;
         .patternCircles{
             height: 944px;
             width: auto;
             left: -260px;
         }
         .imageContainer{
-            position: relative;
             width: 450px;
             .productImage{
                 height: 460px;

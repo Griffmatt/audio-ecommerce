@@ -4,13 +4,21 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
+    top:0;
     justify-content: center;
     display: flex;
     z-index: -1;
     transition: z-index .3s ease-in-out;
+    .buttonOne{
+        width: 100%;
+    }
 }
 
-.showModal{
+.showCheckoutModal{
+    z-index: 90;
+}
+
+.showConfirmedModal{
     z-index: 90;
 }
 
@@ -26,7 +34,7 @@
     background-color: rgba($SecBlack, .5);
 }
 
-.modalWrapper{
+.checkoutModalWrapper{
     width: 90vw;
     max-width: 1600px;
     position: relative;
@@ -50,13 +58,10 @@
     transition: top .3s ease-in-out;
     padding: 32px;
     z-index: 91;
-    .buttonOne{
-        width: 100%;
-    }
 
 }
 
-.slideModal{
+.slideCheckoutModal{
     top: 32px;
 }
 
@@ -80,6 +85,44 @@
             opacity: .5;
         }
     }
+}
+
+.confirmedModalWrapper{
+    width: 90vw;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmedModal{
+    width: 90vw;
+    max-width: 476px;
+    padding: 32px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    background-color: $SecWhite;
+    z-index: 91;
+    position: relative;
+    top: -60px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    svg{
+        width: 64px;
+        height: auto;
+        margin-bottom: 8px;
+    }
+    h3{
+        margin-bottom: 0;
+    }
+}
+
+.slideConfirmedModal{
+    top: 0;
+    opacity: 1;
 }
 
 

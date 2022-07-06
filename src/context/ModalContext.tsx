@@ -6,9 +6,10 @@ interface ModalContextProviderProps{
 }
 
 type ModalContextType = {
-    handleModalClick: () => void,
+    handleModalClick: (arg0:string) => void,
     closeModal: () => void,
-    modalShown: boolean
+    showCheckoutModal: boolean,
+    showConfirmedModal: boolean,
 }
 
 const ModalContext = createContext({} as ModalContextType)
@@ -19,18 +20,28 @@ export function useModal() {
 
 
 export function ModalContextProvider({ children }: ModalContextProviderProps){
-    const [modalShown, setModalShown] = useState(false)
+    const [showCheckoutModal, setShowCheckoutModal] = useState(false)
+    const [showConfirmedModal, setShowConfirmedModal] = useState(false)
 
-    const handleModalClick = () => {
-        setModalShown(!modalShown)
+    function handleModalClick(type: string) {
+        if(type==="checkout"){ 
+            setShowCheckoutModal(!showCheckoutModal)
+            return
+        }
+        if(type==="confirm"){
+            setShowConfirmedModal(!showConfirmedModal)
+        }
     }
 
-    function closeModal() {
-        setModalShown(false)
+    const closeModal = () => {
+        setShowCheckoutModal(false)
+
+        setShowConfirmedModal(false)
     }
+
 
     return (
-        <ModalContext.Provider value={{handleModalClick, closeModal, modalShown}}>
+        <ModalContext.Provider value={{handleModalClick, closeModal, showConfirmedModal, showCheckoutModal}}>
             {children}
         </ModalContext.Provider>
     )
