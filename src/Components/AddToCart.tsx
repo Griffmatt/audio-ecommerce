@@ -9,6 +9,10 @@ interface ProductType{
 function AddToCart({product}: ProductType) {
     const [amount, setAmount] = useState(0)
 
+    const handleAddToCart = () => {
+        setAmount(0)
+    }
+
   return (
     <>
         <h6>{convertCurrency(product.price)}</h6>
@@ -18,7 +22,7 @@ function AddToCart({product}: ProductType) {
                 <p className="subTitle">{amount}</p>
                 <div className="subTitle incrementButton" onClick={()=> setAmount(amount+1)}>+</div>
             </div>
-            <button className="buttonOne">ADD TO CART</button>
+            <button className="buttonOne" onClick={handleAddToCart}>ADD TO CART</button>
         </div>
     </>
   )

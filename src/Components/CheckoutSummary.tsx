@@ -1,11 +1,14 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useModal } from '../context/ModalContext'
 
-function CheckoutSummary() {
+interface MessageState{
+  setMessage: React.Dispatch<React.SetStateAction<string>>,
+  message: string
+}
+
+function CheckoutSummary({message, setMessage}: MessageState) {
 
   const { handleModalClick } = useModal()
-
-  const [message, setMessage] = useState("CONTINUE & PAY")
 
   const handleClick = () => {
     setMessage("CONFIRMING PAYMENT")

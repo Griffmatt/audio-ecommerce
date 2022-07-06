@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
 
-function Checkoutinfo() {
+interface SetMessage{
+    setMessage: React.Dispatch<React.SetStateAction<string>>
+}
+
+function Checkoutinfo({setMessage}: SetMessage) {
     const [usingCreditCard, setUsingCreditCard] = useState(true) 
 
     const handleRadioButtonCard = () => {
             setUsingCreditCard(true)
+            setMessage("CONTINUE & PAY")
             document.getElementById("creditCard")?.click()
     }
 
     const handleRadioButtonCash = () => {
         setUsingCreditCard(false)
+        setMessage("CONTINUE")
         document.getElementById("cash")?.click()
 }
 
