@@ -7,7 +7,7 @@
     top:0;
     justify-content: center;
     display: flex;
-    z-index: -1;
+    z-index: -2;
     transition: z-index .3s ease-in-out;
     .buttonOne{
         width: 100%;
@@ -46,7 +46,7 @@
     background-color: $SecWhite;
     border-radius: 8px;
     max-width: 313px;
-    height: 488px;
+    height: min-content;
     width: 90vw;
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@
     align-items: center;
     position: absolute;
     right: 0;
-    top: -600px;
+    top: -800px;
     transition: top .3s ease-in-out;
     padding: 32px;
     z-index: 91;
@@ -65,7 +65,7 @@
     top: 32px;
 }
 
-.checkOutItems{
+.checkoutItems{
     h6{
         text-align: center;
         width: 100%;
