@@ -1,16 +1,26 @@
 import React, {useState} from 'react';
+import{ useDispatch} from 'react-redux'
+import { addItem } from "../redux/shoppingCartSlice"
 
 import convertCurrency from "../Utilities/CurrencyConvertor"
 
 interface ProductType{
-    product: any,
+    product: ProductPrice,
+}
+
+interface ProductPrice{
+    price: number
 }
 
 function AddToCart({product}: ProductType) {
     const [amount, setAmount] = useState(0)
+    const dispatch = useDispatch()
 
     const handleAddToCart = () => {
-        setAmount(0)
+        if(amount){
+            dispatch(addItem({...product, amount: amount}))
+            setAmount(0)
+        }
     }
 
   return (

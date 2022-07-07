@@ -1,14 +1,27 @@
 import React from 'react'
 import { useModal } from '../context/ModalContext'
+import convertCurrency from "../Utilities/CurrencyConvertor"
+
+import { useSelector } from 'react-redux'
+import {  selectCart } from './../redux/shoppingCartSlice'
 
 interface MessageState{
   setMessage: React.Dispatch<React.SetStateAction<string>>,
   message: string
 }
 
+interface ItemType{
+  amount: number,
+  price: number,
+  name: string
+}
+
 function CheckoutSummary({message, setMessage}: MessageState) {
 
   const { handleModalClick } = useModal()
+
+  const cart = useSelector(selectCart)
+  console.log(cart)
 
   const handleClick = () => {
     setMessage("CONFIRMING PAYMENT")
@@ -20,40 +33,20 @@ function CheckoutSummary({message, setMessage}: MessageState) {
         <div className="checkoutSummary">
             <h6>SUMMARY</h6>
             <div className="checkoutItems">
-                <div className="checkoutItem">
-                  <div className="checkoutItemInfo">
-                    <img src="\assets\cart\image-xx59-headphones.jpg"/>
-                    <div>
-                      <p className="boldP">XX99</p>
-                      <p className="underLine">$599</p>
+              {cart.map((item: ItemType)=>{
+                return(
+                  <div className="checkoutItem">
+                      <div className="checkoutItemInfo">
+                        <img src="\assets\cart\image-xx59-headphones.jpg"/>
+                        <div>
+                          <p className="boldP">{item.name}</p>
+                          <p className="underLine">{convertCurrency((item.price * item.amount))}</p>
+                        </div>
                     </div>
+                    <p className="itemAmount">{`x${item.amount}`}</p>
                 </div>
-                <p className="itemAmount">x1</p>
-              </div>
-            </div>
-            <div className="checkoutItems">
-                <div className="checkoutItem">
-                  <div className="checkoutItemInfo">
-                    <img src="\assets\cart\image-xx59-headphones.jpg"/>
-                    <div>
-                      <p className="boldP">XX99</p>
-                      <p className="underLine">$599</p>
-                    </div>
-                </div>
-                <p className="itemAmount">x1</p>
-              </div>
-            </div>
-            <div className="checkoutItems">
-                <div className="checkoutItem">
-                  <div className="checkoutItemInfo">
-                    <img src="\assets\cart\image-xx59-headphones.jpg"/>
-                    <div>
-                      <p className="boldP">XX99</p>
-                      <p className="underLine">$599</p>
-                    </div>
-                </div>
-                <p className="itemAmount">x1</p>
-              </div>
+                )
+              })}
             </div>
             <div className="checkoutInfo">
               <div>
@@ -62,7 +55,7 @@ function CheckoutSummary({message, setMessage}: MessageState) {
               </div>
               <div>
                 <p>SHIPPING</p>
-                <h6>$50</h6>
+                <h6>{cart.length?"$50": "$0"}</h6>
               </div>
               <div>
                 <p>TAX</p>

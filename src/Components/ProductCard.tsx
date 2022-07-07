@@ -16,7 +16,8 @@ interface Products{
     image: Images,
     name: string,
     description: string,
-    slug: string
+    slug: string, 
+    price: number
 
 }
 

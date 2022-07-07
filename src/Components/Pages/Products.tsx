@@ -7,11 +7,11 @@ import ShopProducts from '../ShopProducts';
 import ProductCardFour from '../ProductCardFour';
 import PreviewCards from '../PreviewCards';
 
-interface productsProps{
+interface ProductsProps{
   type: string
 }
 
-function Products({type}:productsProps) {
+function Products({type}:ProductsProps) {
   let filteredData = Data.filter(product=> product.category === type)
   return (
     <>

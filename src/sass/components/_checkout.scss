@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     border-radius: 8px;
-
+    width: 60vw;
     margin-top: 20px;
     h6{
         color: $MainOrange;
@@ -127,7 +127,7 @@
 
 .checkoutSummaryWrapper{
     max-width: 350px;
-    width: 100%;
+    width: 27vw;
     height: auto;
     background-color: $SecWhite;
     border-radius: 8px;
@@ -200,7 +200,7 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: $Tablet){
     .checkoutSummaryWrapper{
         max-width: 100%;
     }

@@ -5,9 +5,11 @@ import CheckoutInfo from '../CheckoutInfo'
 import CheckoutSummary from '../CheckoutSummary'
 import ConfirmedOrderModal from '../ConfirmedOrderModal'
 
+
 function Checkout() {
 
   const [message, setMessage] = useState("CONTINUE & PAY")
+
 
   return (
     <>
