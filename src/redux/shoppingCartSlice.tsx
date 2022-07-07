@@ -19,7 +19,7 @@ export const shoppingCartlice = createSlice({
                             item.amount = item.amount + action.payload.amount
                         }
                     })
-                return
+                    return
             }
             state.shoppingCart = [...state.shoppingCart, action.payload]
         },
@@ -28,11 +28,26 @@ export const shoppingCartlice = createSlice({
         },
         removeAll: (state) => {
             state.shoppingCart = []
+        },
+        incrementAmount: (state, action) => {
+            state.shoppingCart.forEach(item=>{
+                if(item.id === action.payload.id){
+                    item.amount++
+                }
+            })
+        },
+        decrementAmount: (state, action) => {
+            state.shoppingCart.forEach(item=>{
+                if(item.id === action.payload.id){
+                    item.amount--
+                }
+            })
         }
+
     },
 });
 
-export const { addItem, removeItem, removeAll } = shoppingCartlice.actions;
+export const { addItem, removeItem, removeAll, incrementAmount, decrementAmount } = shoppingCartlice.actions;
 
 export const selectCart= (state: any) => state.shoppingCart.shoppingCart;
 

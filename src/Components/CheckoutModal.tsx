@@ -5,6 +5,19 @@ import { Link } from 'react-router-dom'
 
 import{ useDispatch} from 'react-redux'
 import { removeAll} from "../redux/shoppingCartSlice"
+import { useSelector } from 'react-redux'
+import {  selectCart, incrementAmount, decrementAmount, removeItem} from './../redux/shoppingCartSlice'
+
+
+import convertCurrency from "../Utilities/CurrencyConvertor"
+import calculateTotal from '../Utilities/CalculateTotal'
+
+interface ItemType{
+    amount: number,
+    price: number,
+    name: string,
+    id: number
+  }
 
 
 function CheckoutModal() {
@@ -12,10 +25,24 @@ function CheckoutModal() {
 const {showCheckoutModal, closeModal } = useModal()
 
 const dispatch = useDispatch()
+const cart = useSelector(selectCart)
 
 const handleRemoveAll = () => {
-    dispatch(removeAll)
+    dispatch(removeAll())
 }
+
+const incrementItem = (item: ItemType) => {
+    dispatch(incrementAmount(item))
+}
+
+const decrementItem = (item: ItemType) => {
+    if(item.amount === 1){
+        dispatch(removeItem(item))
+        return
+    }
+    dispatch(decrementAmount(item))
+}
+
 
   return (
     <div className={`modalBackground ${showCheckoutModal?"showCheckoutModal": ""}`}>
@@ -23,17 +50,34 @@ const handleRemoveAll = () => {
             <div className={`checkoutModal ${showCheckoutModal?"slideCheckoutModal": ""}`} >
                 <div className="checkoutContent">
                     <div >
-                        <h6>{`CART (3)`}</h6>
+                        <h6>{`CART (${cart.length})`}</h6>
                         <p className="removeAllButton" onClick={handleRemoveAll}>Remove All</p>
                     </div>
-                    <div className="checkOutItems">
-                        <h6>Add Items To Your Cart</h6>
+                    <div className="checkoutItems">
+                        {cart.map((item: ItemType)=>{
+                            return(
+                            <div className="checkoutItem" key={item.id}>
+                                <div className="checkoutItemInfo">
+                                    <img src="\assets\cart\image-xx59-headphones.jpg" alt={item.name}/>
+                                    <div>
+                                    <p className="boldP">{item.name}</p>
+                                    <p className="underLine">{convertCurrency((item.price * item.amount))}</p>
+                                    </div>
+                                </div>
+                                <div className="incrementButtons">
+                                    <div className="subTitle incrementButton" onClick={() => decrementItem({...item})}>-</div>
+                                     <p className="subTitle">{item.amount}</p>
+                                    <div className="subTitle incrementButton" onClick={() => incrementItem({...item})}>+</div>
+                                </div>
+                            </div>
+                            )
+                        })}
                     </div>
                 </div>
                 <div className="checkoutContent">
                     <div>
                         <p>TOTAL</p>
-                        <h6>$5,4982</h6>
+                        <h6>{cart.length >0?convertCurrency(calculateTotal(cart)): "$0"}</h6>
                     </div>
                     <Link to="/checkout"><button className="buttonOne" onClick={closeModal}>CHECKOUT</button></Link>
                 </div>

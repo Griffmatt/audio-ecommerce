@@ -4,6 +4,7 @@ import convertCurrency from "../Utilities/CurrencyConvertor"
 
 import { useSelector } from 'react-redux'
 import {  selectCart } from './../redux/shoppingCartSlice'
+import calculateTotal, { calculateGrandTotal, calculateTax } from '../Utilities/CalculateTotal'
 
 interface MessageState{
   setMessage: React.Dispatch<React.SetStateAction<string>>,
@@ -39,7 +40,7 @@ function CheckoutSummary({message, setMessage}: MessageState) {
                       <div className="checkoutItemInfo">
                         <img src="\assets\cart\image-xx59-headphones.jpg"/>
                         <div>
-                          <p className="boldP">{item.name}</p>
+                          <div className="boldP">{item.name}</div>
                           <p className="underLine">{convertCurrency((item.price * item.amount))}</p>
                         </div>
                     </div>
@@ -51,7 +52,7 @@ function CheckoutSummary({message, setMessage}: MessageState) {
             <div className="checkoutInfo">
               <div>
                 <p>TOTAL</p>
-                <h6>$50</h6>
+                <h6>{cart.length >0?convertCurrency(calculateTotal(cart)): "$0"}</h6>
               </div>
               <div>
                 <p>SHIPPING</p>
@@ -59,12 +60,12 @@ function CheckoutSummary({message, setMessage}: MessageState) {
               </div>
               <div>
                 <p>TAX</p>
-                <h6>$50</h6>
+                <h6>{cart.length >0?convertCurrency(calculateTax(cart)): "$0"}</h6>
               </div>
             </div>
             <div className="checkoutGrandTotal">
               <p>Grand Total</p>
-              <h6>$50</h6>
+              <h6>{cart.length >0?convertCurrency(calculateGrandTotal(cart)): "$0"}</h6>
             </div>
             <button className="buttonOne" onClick={handleClick}>{message}</button>
         </div>

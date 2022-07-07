@@ -80,10 +80,14 @@
     div{
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        p{
-            opacity: .5;
-        }
+    }
+    p{
+        opacity: .5;
+    }
+    .incrementButtons{
+        width: 90px;
+        height: 32px;
+        justify-content: space-evenly;
     }
 }
 
