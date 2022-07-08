@@ -13,7 +13,6 @@ function Checkout() {
 
   return (
     <>
-        <section className="noBanner"/>
         <section className="pageContent">
           <div className="pageWrapper">
             <BackButton/>
