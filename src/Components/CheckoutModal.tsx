@@ -16,8 +16,12 @@ interface ItemType{
     amount: number,
     price: number,
     name: string,
-    id: number
+    id: number,
+    slug: string,
+    cartImage: string,
+    cartName: string
   }
+
 
 
 function CheckoutModal() {
@@ -58,9 +62,9 @@ const decrementItem = (item: ItemType) => {
                             return(
                             <div className="checkoutItem" key={item.id}>
                                 <div className="checkoutItemInfo">
-                                    <img src="\assets\cart\image-xx59-headphones.jpg" alt={item.name}/>
+                                    <img src={item.cartImage} alt={item.name}/>
                                     <div>
-                                    <p className="boldP">{item.name}</p>
+                                    <p className="boldP">{item.cartName}</p>
                                     <p className="underLine">{convertCurrency((item.price * item.amount))}</p>
                                     </div>
                                 </div>

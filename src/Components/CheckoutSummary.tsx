@@ -14,7 +14,9 @@ interface MessageState{
 interface ItemType{
   amount: number,
   price: number,
-  name: string
+  name: string,
+  cartName: string,
+  cartImage: string
 }
 
 function CheckoutSummary({message, setMessage}: MessageState) {
@@ -38,9 +40,9 @@ function CheckoutSummary({message, setMessage}: MessageState) {
                 return(
                   <div className="checkoutItem">
                       <div className="checkoutItemInfo">
-                        <img src="\assets\cart\image-xx59-headphones.jpg"/>
+                        <img src={item.cartImage}/>
                         <div>
-                          <div className="boldP">{item.name}</div>
+                          <div className="boldP">{item.cartName}</div>
                           <p className="underLine">{convertCurrency((item.price * item.amount))}</p>
                         </div>
                     </div>
