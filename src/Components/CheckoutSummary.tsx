@@ -42,7 +42,7 @@ function CheckoutSummary({message, setMessage}: MessageState) {
                       <div className="checkoutItemInfo">
                         <img src={item.cartImage}/>
                         <div>
-                          <div className="boldP">{item.cartName}</div>
+                          <p>{item.cartName}</p>
                           <p className="underLine">{convertCurrency((item.price * item.amount))}</p>
                         </div>
                     </div>
