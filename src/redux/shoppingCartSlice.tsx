@@ -8,8 +8,8 @@ const initialState: ShoppingCartState ={
     shoppingCart:[]
 }
 
-export const shoppingCartlice = createSlice({
-    name: "favorite",
+export const shoppingCartSlice = createSlice({
+    name: "shoppingCart",
     initialState,
     reducers: {
         addItem: (state, action) => {
@@ -47,8 +47,8 @@ export const shoppingCartlice = createSlice({
     },
 });
 
-export const { addItem, removeItem, removeAll, incrementAmount, decrementAmount } = shoppingCartlice.actions;
+export const { addItem, removeItem, removeAll, incrementAmount, decrementAmount } = shoppingCartSlice.actions;
 
 export const selectCart= (state: any) => state.shoppingCart.shoppingCart;
 
-export default shoppingCartlice.reducer;
+export default shoppingCartSlice.reducer;

@@ -4,11 +4,13 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import thunk from 'redux-thunk';
 
-import shoppingCartSlice from './shoppingCartSlice'
+import shoppingCartSlice from './shoppingCartSlice';
+import userInfoSlice from './userInfoSlice';
 
 
 const reducers = combineReducers({
     shoppingCart:shoppingCartSlice,
+    userInfo: userInfoSlice
 })
 
 const persistConfig = {

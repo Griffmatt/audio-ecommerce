@@ -1,13 +1,15 @@
-import React from 'react'
-import { useModal } from '../context/ModalContext'
+import React, { useState } from 'react'
 import convertCurrency from "../Utilities/CurrencyConvertor"
 
 import { useSelector } from 'react-redux'
 import {  selectCart } from './../redux/shoppingCartSlice'
+import { setUserInfo} from './../redux/userInfoSlice';
+
+import { useDispatch } from 'react-redux';
+
 import calculateTotal, { calculateGrandTotal, calculateTax } from '../Utilities/CalculateTotal'
 
 interface MessageState{
-  setMessage: React.Dispatch<React.SetStateAction<string>>,
   message: string
 }
 
@@ -16,29 +18,32 @@ interface ItemType{
   price: number,
   name: string,
   cartName: string,
-  cartImage: string
+  cartImage: string,
+  id: number
 }
 
-function CheckoutSummary({message, setMessage}: MessageState) {
+function CheckoutSummary({message}: MessageState) {
 
-  const { handleModalClick } = useModal()
 
   const cart = useSelector(selectCart)
-  console.log(cart)
 
-  const handleClick = () => {
-    setMessage("CONFIRMING PAYMENT")
-    setTimeout(()=>{handleModalClick("confirm"); setMessage("CONFIRMED")}, 1000)
+  const [currentItems] = useState(cart)
+
+  const dispatch = useDispatch()
+
+  const handleCheckout = (key: string, value: any) => {
+    dispatch(setUserInfo({key, value}))
   }
+
 
   return (
     <div className="checkoutSummaryWrapper">
         <div className="checkoutSummary">
             <h6>SUMMARY</h6>
             <div className="checkoutItems">
-              {cart.map((item: ItemType)=>{
+              {currentItems.map((item: ItemType)=>{
                 return(
-                  <div className="checkoutItem">
+                  <div className="checkoutItem" key={item.id}>
                       <div className="checkoutItemInfo">
                         <img src={item.cartImage}/>
                         <div>
@@ -54,22 +59,28 @@ function CheckoutSummary({message, setMessage}: MessageState) {
             <div className="checkoutInfo">
               <div>
                 <p>TOTAL</p>
-                <h6>{cart.length >0?convertCurrency(calculateTotal(cart)): "$0"}</h6>
+                <h6>{currentItems.length >0?convertCurrency(calculateTotal(currentItems)): "$0"}</h6>
               </div>
               <div>
                 <p>SHIPPING</p>
-                <h6>{cart.length?"$50": "$0"}</h6>
+                <h6>{currentItems.length?"$50": "$0"}</h6>
               </div>
               <div>
                 <p>TAX</p>
-                <h6>{cart.length >0?convertCurrency(calculateTax(cart)): "$0"}</h6>
+                <h6>{currentItems.length >0?convertCurrency(calculateTax(currentItems)): "$0"}</h6>
               </div>
             </div>
             <div className="checkoutGrandTotal">
               <p>Grand Total</p>
-              <h6>{cart.length >0?convertCurrency(calculateGrandTotal(cart)): "$0"}</h6>
+              <h6>{currentItems.length >0?convertCurrency(calculateGrandTotal(currentItems)): "$0"}</h6>
             </div>
-            <button className="buttonOne" onClick={handleClick}>{message}</button>
+            <button className="buttonOne" type="submit" form="checkout-form" onClick={() =>handleCheckout("itemsOrdered", currentItems.map((item: 
+            ItemType)=>{return({
+              "id": item.id,
+              "name": item.name,
+              "amount": item.amount,
+              "image": item.cartImage
+            })}))}>{message}</button>
         </div>
     </div>
   )

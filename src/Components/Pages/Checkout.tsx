@@ -18,7 +18,7 @@ function Checkout() {
             <BackButton/>
             <div className="checkoutWrapper">
               <CheckoutInfo setMessage={setMessage} />
-              <CheckoutSummary message={message} setMessage={setMessage}/>
+              <CheckoutSummary message={message}/>
             </div>
           </div>
           <ConfirmedOrderModal/>
