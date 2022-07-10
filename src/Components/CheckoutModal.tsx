@@ -83,7 +83,7 @@ const decrementItem = (item: ItemType) => {
                         <p>TOTAL</p>
                         <h6>{cart.length >0?convertCurrency(calculateTotal(cart)): "$0"}</h6>
                     </div>
-                    <Link to="/checkout"><button className="buttonOne" onClick={closeModal}>CHECKOUT</button></Link>
+                    {cart.length === 0?<button className="buttonOne" onClick={closeModal}>ADD ITEMS TO CART</button>:<Link to="/checkout"><button className="buttonOne" onClick={closeModal}>CHECKOUT</button></Link>}
                 </div>
             </div>
         </div>
