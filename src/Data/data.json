@@ -179,8 +179,8 @@
     "id": 3,
     "slug": "xx99-mark-one-headphones",
     "name": "XX99 Mark I Headphones",
-    "cartImage": "./assets/cart/image-xx99-mnark-one-headphones.jpg",
-    "cartName": "XX99",
+    "cartImage": "./assets/cart/image-xx99-mark-one-headphones.jpg",
+    "cartName": "XX99 MK I",
     "image": {
       "mobile": "./assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
       "tablet": "./assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
