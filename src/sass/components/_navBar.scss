@@ -16,15 +16,6 @@
     cursor: pointer;
 }
 
-.navLogos{
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    a{
-        height: 25px;
-    }
-}
-
 .navHamburger{
     display: none;
 }
@@ -86,12 +77,12 @@
             background-color: $SecBlack;
             min-width: 100vw;
             top: 96px;
-            right: -110vw;
-            transition: right .3s ease-in-out;
+            left: -110vw;
+            transition: left .3s ease-in-out;
             z-index: 100;
         }
         .navOpen{
-            right: 0;
+            left: 0;
         }
     }
 
