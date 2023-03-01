@@ -1,0 +1,97 @@
+@use "../variables" as *;
+
+.buttonOne{
+    width: 168px;
+    height: 48px;
+    background-color: $MainOrange;
+    color: $SecWhite;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonOne:hover{
+    background-color: $SecOrange;
+}
+
+.buttonTwo:hover{
+    color: $MainOrange;
+}
+
+.buttonThreeA{
+    border: none;
+    background-color: $SecBlack;
+    color: $SecWhite;
+    width: 160px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.buttonThree{
+    border:1.5px solid $SecBlack;
+    color: $SecBlack;
+    width: 160px;
+    height: 48px;
+    cursor: pointer;
+    background-color: rgba($MainOrange, 0);
+}
+
+.buttonThree:hover{
+    background-color: $SecBlack;
+    color: $SecWhite;
+}
+
+.buttonThreeA:hover{
+    background-color: $SecGrey;
+}
+
+.addToCartButtons{
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.incrementButtons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 48px;
+    width: 120px;
+    background-color: $MainGrey;
+    p{
+        user-select: none;
+    }
+}
+.incrementButton{
+    color: rgba($SecBlack, .25);
+    cursor: pointer;
+    line-height: 48px;
+    user-select: none;
+}
+
+.incrementButton:hover{
+    color: $MainOrange;
+}
+
+.backButton{
+    opacity: .5;
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    cursor: pointer;
+}
+
+.backButton:hover{
+    color: $MainOrange;
+    opacity: 1;
+}
+
+.removeAllButton{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.removeAllButton:hover{
+    color: $MainOrange;
+    opacity: 1;
+}

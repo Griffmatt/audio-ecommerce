@@ -1,0 +1,217 @@
+@use"../variables" as *;
+
+.checkoutInfoWrapper{
+    background-color: $SecWhite;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    h6{
+        color: $MainOrange;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 32px;
+        h3{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.checkoutInfoRow{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    label{
+        font-size: 14px;
+        font-family:"Manrope Bold", Georgia, serif;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        width: 100%;
+    }
+
+    input{
+        height: 54px;
+        border-radius: 8px;
+        border: 1px solid $LightGrey;
+        text-indent: 24px;
+        font-size: 14px;
+        font-family:"Manrope Bold", Georgia, serif;
+    }
+
+    input:focus{
+        border-color: $MainOrange;
+    }
+
+    input:hover{
+        border-color: $MainOrange
+    }
+
+    .formInputs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 18px;
+        .largeInput{
+            width: 100%;
+        }
+
+    }
+}
+
+.checkoutRadioButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    label{
+        height: 54px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid $LightGrey;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        input{
+            width: 20px;
+            height: 20px;
+            margin: 16px;
+        }
+        
+    }
+
+    label:hover{
+        border-color: $MainOrange;
+    }
+}
+
+.cashOnDemand{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    p{
+        width: 100%;
+    }
+    img{
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media screen and (min-width: $Tablet) {
+    .checkoutInfoRow{
+        label{
+            width: 48%;
+        }
+    }
+
+    .checkoutRadioButtons{
+        width: 48%;
+        label{
+            width: 100%;
+        }
+    }
+}
+
+.checkoutSummaryWrapper{
+    height: auto;
+    background-color: $SecWhite;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    height: min-content;
+}
+
+.checkoutSummary{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    margin:32px;
+    height: min-content;
+    button{
+        width: 100%;
+    }
+}
+
+.checkoutItems{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.checkoutItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        font-family: "Manrope Bold", Georgia, serif;
+    }
+}
+
+.checkoutItemInfo{
+    display: flex;
+    gap: 16px;
+    max-width: 60%;
+    img{
+        height: 64px;
+        width: auto;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .underLine{
+            opacity: .5;
+        }
+    }
+}
+
+.itemAmount{
+    opacity: .5;
+}
+
+.checkoutInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.checkoutGrandTotal{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px){
+    .checkoutSummaryWrapper{
+        width: 100%;
+    }
+
+    .checkoutInfoWrapper{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .checkoutSummaryWrapper{
+        width: 350px;
+    }
+
+    .checkoutInfoWrapper{
+        width: 730px;
+    }
+}

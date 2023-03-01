@@ -1,0 +1,53 @@
+@use "../variables" as *;
+
+.homePageHeader{
+    background-color: $MainBlack;
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.pageHeader{
+    background-color: $SecBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productHeader{
+    height: 100px;
+    width: 100%;
+    background-color: $SecBlack;
+}
+
+.pageContent{
+    display: flex;
+    justify-content: center;
+}
+
+.pageWrapper{
+    max-width: 1110px;
+    width: 90vw ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10vh;
+    padding-block: 10vh;
+    position: relative;
+    background-color: $MainWhite;
+    margin-top: 100px;
+}
+
+.pageFooter{
+    background-color: $SecBlack;
+    height: 200px;
+    width: 100%;
+}
+
+.checkoutWrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}

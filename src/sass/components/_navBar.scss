@@ -1,0 +1,117 @@
+@use "../variables" as *;
+
+.navBar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 101;
+    background-color: $SecBlack;
+}
+
+.navLogo{
+    height: auto;
+    width: 143px;
+    cursor: pointer;
+}
+
+.navHamburger{
+    display: none;
+}
+
+.navCart{
+    height: 20px;
+    width: auto;
+    cursor: pointer;
+    fill: $SecWhite;
+}
+.navCar:hover{
+    fill: $MainOrange;
+}
+
+.navWrapper{
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: 1px solid #979797;
+    position: relative;
+    ul{
+        padding-left:0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 34px;
+        margin: 0;
+        li{
+            cursor: pointer;
+            a{
+                text-decoration: none;
+                color: $SecWhite;
+                font-family: "Manrope Bold";
+                font-size: 13px;
+                line-height: 25px;
+                letter-spacing: 2px;
+            }
+            a:hover{
+                color: $MainOrange;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $Tablet){
+    .navWrapper{
+        ul{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            background-color: $SecBlack;
+            min-width: 100vw;
+            top: 96px;
+            left: -110vw;
+            transition: left .3s ease-in-out;
+            z-index: 100;
+        }
+        .navOpen{
+            left: 0;
+        }
+    }
+
+
+
+    .navHamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .navHamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .navHamburger.active .bar:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navHamburger.active .bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 4px;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        background-color: $SecWhite;
+    }
+}

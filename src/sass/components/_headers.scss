@@ -1,0 +1,94 @@
+@use "../variables" as *;
+
+p{
+    font-size: .9375rem;
+    line-height: 25px;
+    font-family: "Manrope Regular", Georgia, serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+h1{
+    font-size: 3.5rem;
+    line-height: 58px;
+    letter-spacing: 2px;
+    margin: 0;
+
+    font-family: "Manrope Bold", Georgia, serif;
+}
+
+h2{
+    font-size: 2.5rem;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+    font-family: "Manrope Bold", Georgia, serif;
+    margin: 0;
+}
+
+h3{
+    font-size: 2rem;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+    font-family: "Manrope Bold", Georgia, serif;
+    margin-top: 0;
+}
+
+h4{
+    font-size: 1.75rem;
+    line-height: 38px;
+    letter-spacing: 2px;
+    font-family: "Manrope Bold", Georgia, serif;
+}
+
+h5{
+    font-size: 1.5rem;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+
+    font-family: "Manrope Bold", Georgia, serif;
+}
+
+h6{
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+    margin: 0;
+    font-family: "Manrope Bold", Georgia, serif;
+}
+
+.overLine{
+    font-size: .875rem;
+    line-height: 19px;
+    letter-spacing: 10px;
+
+    font-family:"Manrope Regular", Georgia, serif;
+}
+
+.subTitle{
+    font-size: .8125rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+
+    font-family: "Manrope Bold";
+}
+
+
+@media screen and (max-width: $Mobile){
+    
+    h1{
+        font-size: 2.25rem;
+    }
+    
+    h2{
+        font-size: 1.75;
+    }
+    
+    h3{
+        font-size: 1.5rem;
+    }
+    
+    h4{
+        font-size: 1.5rem;
+    }
+    
+}

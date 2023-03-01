@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+@import "./components/banners.scss";
+@import "./components/buttons.scss";
+@import "./components/footer.scss";
+@import "./components/headers.scss";
+@import "./components/navBar.scss";
+@import "./components/productCards.scss";
+@import "./components/shopProducts.scss";
+@import "./components/wrappers";
+@import "./components/modals";
+@import "./components/checkout";
+
+
+body{
+    background-color: $MainWhite;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $SecBlack;
+}
+
+

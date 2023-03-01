@@ -1,0 +1,115 @@
+@use "../variables" as *;
+
+.footer{
+    width: 100%;
+    min-height: 365px;
+    display: flex;
+    justify-content: center;
+    background-color: $SecBlack;
+    text-align: center;
+}
+    .footerWrapper{
+        max-width: 1600px;
+        display: flex;
+        justify-content: space-between;
+        padding-block: 38px;
+        flex-direction: column;
+        align-items: center;
+        width: 77%;
+        position: relative;
+        gap: 34px;
+        .footerBar{
+            width: 8vw;
+            height: 4px;
+            background-color: $MainOrange;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        p{
+            color: rgba($SecWhite, .5);
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 600px;
+        }
+}
+
+.footerNav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    .footerLogo{
+        height: auto;
+        width: 143px;
+        cursor: pointer;
+    }
+    ul{
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 34px;
+        margin: 0;
+        li{
+            cursor: pointer;
+            a{
+                text-decoration: none;
+                color: $SecWhite;
+                font-family: "Manrope Bold";
+                font-size: 13px;
+                line-height: 25px;
+                letter-spacing: 2px;
+            }
+            a:hover{
+                color: $MainOrange;
+            }
+        }
+    }
+}
+
+.footerDescription{
+    max-width: 600px;
+}
+
+.footerInfo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    .footerSocials{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        svg{
+            fill: $SecWhite;
+            cursor: pointer;
+        }
+        svg:hover{
+            fill: $MainOrange;
+        }
+    }
+}
+
+@media screen and (min-width: $Tablet){
+
+    .footer{
+        text-align: start;
+    }
+    .footerNav{
+        flex-direction: row;
+        ul{
+            flex-direction: row;
+        }
+    }
+    .footerDescription{
+        align-self: flex-start;
+    }
+
+    .footerInfo{
+        flex-direction: row;
+    }
+}
